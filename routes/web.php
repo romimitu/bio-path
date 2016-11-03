@@ -27,3 +27,4 @@ Route::post('agent/{id}/update', 'AgentsController@update');
 Route::post('agent/delete/{id}', 'AgentsController@destroy');
 
 Route::get('/bills', 'BillingController@upload' );
+Route::post('/bill/store', 'BillingController@store' );

@@ -3,7 +3,7 @@
 @section('content')
 <style>
 .form-group{overflow: hidden;}
-.form-control{width: auto;}
+
 </style>
 <div id="wrapper">
     @include('layouts.sidebar')
@@ -63,7 +63,7 @@
             {!! Form::open(['url' => 'agent/store', 'method'=>'post']) !!}
                 <div class="form-group">
                 {!! Form::label('Name', null, ['class'=> 'col-sm-3', 'for'=>'name']) !!}
-                {!! Form::text('name', null, ['class'=> 'form-control col-sm-9', 'id'=>'Name']) !!}
+                {!! Form::text('name', null, ['class'=> 'form-control col-sm-9', 'id'=>'Name', 'required' => 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('Email', null, ['class'=> 'col-sm-3' ]) !!}
@@ -71,15 +71,15 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('Mobile', null, ['class'=> 'col-sm-3']) !!}
-                    {!! Form::text('mobile', null, ['class'=> 'form-control col-sm-9']) !!}
+                    {!! Form::text('mobile', null, ['class'=> 'form-control col-sm-9', 'required' => 'required']) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('Address', null, ['class'=> 'col-sm-3']) !!}
-                    {!! Form::text('address', null, ['class'=> 'form-control col-sm-9']) !!}
+                    {!! Form::text('address', null, ['class'=> 'form-control col-sm-9', 'required' => 'required']) !!}
                 </div>                       
                 <div class="form-group">
                     {!! Form::label('Activity', null, ['class'=> 'col-sm-3']) !!}
-                    {!! Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'],
+                    {!! Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive', 'required' => 'required'],
                     'Active', ['class'=> 'form-control col-sm-9']) !!}
                 </div>
                 {!! Form::submit('Submit', ['class'=> 'btn btn-primary']) !!}

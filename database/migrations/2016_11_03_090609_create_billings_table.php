@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatBillingTable extends Migration
+class CreateBillingsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreatBillingTable extends Migration
      */
     public function up()
     {
-        Schema::create('billing', function (Blueprint $table) {
+        Schema::create('billings', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->increments('receipt');            
+            $table->string('receipt');            
             $table->string('name');            
             $table->string('father');            
             $table->string('country');            
@@ -23,6 +23,8 @@ class CreatBillingTable extends Migration
             $table->string('recrutoffice');            
             $table->string('recrutingcontact');            
             $table->string('medicaldate');            
+            $table->string('slipdate');            
+            $table->string('expirydate');            
             $table->string('reportdate');            
             $table->string('reporttime');            
             $table->string('medicalfee');            
@@ -31,6 +33,7 @@ class CreatBillingTable extends Migration
             $table->string('filePath');
             $table->timestamps();
         });
+        DB::update("ALTER TABLE agents AUTO_INCREMENT = 100000;");
     }
 
     /**
@@ -40,6 +43,6 @@ class CreatBillingTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('billing');
+        Schema::dropIfExists('billings');
     }
 }
