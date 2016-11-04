@@ -56,9 +56,9 @@ class AgentsController extends Controller
     {
         
         $agent = Agent::find($id);            
-        $agent->destroy();
+        $agent->destroy($id);
         
-        Session::flash('msg', 'Data Successfully Updated');
+        Session::flash('msg', 'Data Successfully Deleted!!');
         return redirect('/agents');
     }
 }

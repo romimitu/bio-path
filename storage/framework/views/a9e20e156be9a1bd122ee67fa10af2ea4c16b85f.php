@@ -1,9 +1,7 @@
-
-
 <?php $__env->startSection('content'); ?>
 <style>
 .form-group{overflow: hidden;}
-.form-control{width: auto;}
+
 </style>
 <div id="wrapper">
     <?php echo $__env->make('layouts.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
@@ -44,7 +42,7 @@
                                 <td><?php echo e($agent->address); ?></td>
                                 <td><?php echo e($agent->activity); ?></td>
                                 <td><a href="<?php echo e(url('/agent/'. $agent->id. '/edit')); ?>" >Edit</a> |
-                                <a href="<?php echo e(url('/agent/delete/'. $agent->id)); ?>">Delete</a></td>
+                                <a href="<?php echo e(url('/agent/'. $agent->id.'/delete')); ?>">Delete</a></td>
                             </tr>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getFirstLoop(); ?>
                         </tbody>
@@ -66,7 +64,7 @@
                 <div class="form-group">
                 <?php echo Form::label('Name', null, ['class'=> 'col-sm-3', 'for'=>'name']); ?>
 
-                <?php echo Form::text('name', null, ['class'=> 'form-control col-sm-9', 'id'=>'Name']); ?>
+                <?php echo Form::text('name', null, ['class'=> 'form-control col-sm-9', 'id'=>'Name', 'required' => 'required']); ?>
 
                 </div>
                 <div class="form-group">
@@ -78,19 +76,19 @@
                 <div class="form-group">
                     <?php echo Form::label('Mobile', null, ['class'=> 'col-sm-3']); ?>
 
-                    <?php echo Form::text('mobile', null, ['class'=> 'form-control col-sm-9']); ?>
+                    <?php echo Form::text('mobile', null, ['class'=> 'form-control col-sm-9', 'required' => 'required']); ?>
 
                 </div>
                 <div class="form-group">
                     <?php echo Form::label('Address', null, ['class'=> 'col-sm-3']); ?>
 
-                    <?php echo Form::text('address', null, ['class'=> 'form-control col-sm-9']); ?>
+                    <?php echo Form::text('address', null, ['class'=> 'form-control col-sm-9', 'required' => 'required']); ?>
 
                 </div>                       
                 <div class="form-group">
                     <?php echo Form::label('Activity', null, ['class'=> 'col-sm-3']); ?>
 
-                    <?php echo Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'],
+                    <?php echo Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive', 'required' => 'required'],
                     'Active', ['class'=> 'form-control col-sm-9']); ?>
 
                 </div>

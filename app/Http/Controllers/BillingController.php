@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use App\Billing;
 use Illuminate\Support\Facades\Input;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Session;
+
 class BillingController extends Controller
 {
     public function __construct()
@@ -12,17 +14,18 @@ class BillingController extends Controller
     }
     public function index()
     {        
-
+        $allbills = Billing::all();
+        return view('bio.admin.bill.view', ['billing' => $allbills]);
     }
 
     public function create()
     {
-        //
+        return view('bio.admin.bill.billing');
     }
 
     public function upload()
     {
-        return view('bio.admin.bill.billing');
+        
     }
 
     public function store(Request $request)
@@ -37,17 +40,22 @@ class BillingController extends Controller
             $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
             
             $name = $timestamp. '-' .$file->getClientOriginalName();            
-            $image->filePath = $name;
-            $file->move(public_path().'/images/', $name);
+            $data['image'] = $name;
+            $file->move(public_path().'/uploads/', $name);
         }
         Billing::create($data);
 
-        return redirect('/bills');
+        $pdf = \PDF::loadView('pdf.invoice', ['data' => $data]);
+        Session::flash('msg', 'Data Successfully Save!!');
+        return $pdf->download('invoice.pdf');
     }
+
 
     public function show($id)
     {
-        //
+        $allBills = Billing::find($id);
+        return view('bio.admin.bill.single', ['bill' => $allBills]);
+
     }
 
     public function edit($id)
@@ -62,6 +70,10 @@ class BillingController extends Controller
 
     public function destroy($id)
     {
-        //
+        $bill = Billing::find($id);            
+        $bill->destroy($id);
+        
+        Session::flash('msg', 'Data Successfully Deleted!!');
+        return redirect('/bills');
     }
 }

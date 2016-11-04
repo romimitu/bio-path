@@ -43,7 +43,7 @@
                                 <td>{{ $agent->address }}</td>
                                 <td>{{ $agent->activity }}</td>
                                 <td><a href="{{ url('/agent/'. $agent->id. '/edit') }}" >Edit</a> |
-                                <a href="{{ url('/agent/delete/'. $agent->id) }}">Delete</a></td>
+                                <a href="{{ url('/agent/'. $agent->id.'/delete') }}">Delete</a></td>
                             </tr>
                         @endforeach
                         </tbody>
@@ -79,7 +79,7 @@
                 </div>                       
                 <div class="form-group">
                     {!! Form::label('Activity', null, ['class'=> 'col-sm-3']) !!}
-                    {!! Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive', 'required' => 'required'],
+                    {!! Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'],
                     'Active', ['class'=> 'form-control col-sm-9']) !!}
                 </div>
                 {!! Form::submit('Submit', ['class'=> 'btn btn-primary']) !!}

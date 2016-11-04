@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
@@ -12,6 +13,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" media="screen">
+
     <link href="/css/app.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
 
@@ -87,7 +91,9 @@
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script>
         $(function() {
-            $( ".datepicker" ).datepicker();
+            $( ".datepicker" ).datepicker({
+                dateFormat: "dd-mm-yy"
+            });
         });
     </script>
 </body>

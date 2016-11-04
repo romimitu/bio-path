@@ -1,5 +1,3 @@
-@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
-
 body {background: lightgray;}
 
 .navbar-default {margin: 0;}
@@ -27,7 +25,7 @@ body {background: lightgray;}
 #sidebar-wrapper .sidebar-nav li a {display: block;text-decoration: none;color: #428bca;}
 .sidebar-nav li:first-child a {background: #92bce0 !important;color: #fff !important;}
 #sidebar-wrapper .sidebar-nav li a .sidebar-icon {width: 45px;height: 45px;font-size: 14px;padding: 0 2px;display: inline-block;
-    text-indent: 7px;margin-right: 10px;color: #fff;float: left;}
+    text-indent: 7px;margin-right: 10px;color: #fff;}
 #sidebar-wrapper .sidebar-nav li a .caret {position: absolute;right: 23px;top: auto;margin-top: 20px;}
 #sidebar-wrapper .sidebar-nav li ul.panel-collapse {list-style: none;-moz-padding-start: 0;-webkit-padding-start: 0;
     -khtml-padding-start: 0;-o-padding-start: 0;padding-start: 0;padding: 0;}
@@ -46,4 +44,5 @@ body {background: lightgray;}
 
 
 
-.form-control {height: 27px;padding: 2px 5px;border-radius:0;
+.form-control {height: 27px;padding: 2px 5px;border-radius:0;}
+.single-bill .table>tbody>tr>td{border: 0px;padding: 5px;line-height: 1.2;}
