@@ -45,7 +45,9 @@ class BillingController extends Controller
         }
         Billing::create($data);
 
-        $pdf = \PDF::loadView('pdf.invoice', ['data' => $data]);
+        $pdf = \PDF::loadView('pdf.invoice', $data = $request->only('id','receipt','name', 'country', 'father', 'medicaldate', 'passport', 'slipdate', 'recrutoffice',
+            'expirydate', 'recrutingcontact', 'reportdate', 'medicalfee', 'reporttime',
+            'remarks', 'password', 'image'));
         Session::flash('msg', 'Data Successfully Save!!');
         return $pdf->download('invoice.pdf');
     }
