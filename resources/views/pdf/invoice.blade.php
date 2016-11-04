@@ -11,7 +11,7 @@
     	<table>
     	  	<tr>
     	  		<td style="width: 150px;">
-    	  			<img src="/{{ $image }}" alt="" class="img-responsive">
+    	  			<img src="{{ asset('uploads/'.$image)}}" alt="" class="img-responsive">
     	  		</td>
     	  		<td style="text-align: center;">
 					<h3>Bio-Path Medical Services Ltd.</h3>

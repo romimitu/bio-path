@@ -13,7 +13,7 @@
                 <div class="panel-body single-bill">                    
                     <div class="row">
                         <div class="col-sm-3">
-                            <img class="img-responsive" src="/uploads/{{ $bill->image }}" alt="{{ $bill->name }}">
+                            <img class="img-responsive" src="{{ asset('uploads/'.$bill->image)}}" alt="{{ $bill->name }}">
                         </div>
                         <div class="col-sm-6" align="center">
                             <h3>Bio-Path Medical Services Ltd.</h3>
