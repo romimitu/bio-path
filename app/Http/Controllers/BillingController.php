@@ -5,6 +5,7 @@ use App\Billing;
 use Illuminate\Support\Facades\Input;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
+use DB;
 
 class BillingController extends Controller
 {
@@ -20,7 +21,9 @@ class BillingController extends Controller
 
     public function create()
     {
-        return view('bio.admin.bill.billing');
+
+        $lastInserted = Billing::all()->last();
+        return view('bio.admin.bill.billing', [ 'lastInsertedID'=>$lastInserted ]);
     }
 
     public function upload()
@@ -30,26 +33,22 @@ class BillingController extends Controller
 
     public function store(Request $request)
     {
-        $data = $request->only('name', 'country', 'father', 'medicaldate', 'passport', 'slipdate', 'recrutoffice',
-            'expirydate', 'recrutingcontact', 'reportdate', 'medicalfee', 'reporttime',
-            'remarks', 'password', 'image');
-
+        $data = $request->except('image');
+ 
         if($request->hasFile('image')) {
             $file = Input::file('image');
             //getting timestamp
             $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
-            
+           
             $name = $timestamp. '-' .$file->getClientOriginalName();            
             $data['image'] = $name;
             $file->move(public_path().'/uploads/', $name);
         }
         Billing::create($data);
-
-        $pdf = \PDF::loadView('pdf.invoice', $data = $request->only('id','receipt','name', 'country', 'father', 'medicaldate', 'passport', 'slipdate', 'recrutoffice',
-            'expirydate', 'recrutingcontact', 'reportdate', 'medicalfee', 'reporttime',
-            'remarks', 'password', 'image'));
+ 
+        $pdf = \PDF::loadView('pdf.invoice', $data);
         Session::flash('msg', 'Data Successfully Save!!');
-        return $pdf->download('invoice.pdf');
+        return $pdf->stream('invoice.pdf');
     }
 
 
@@ -75,7 +74,7 @@ class BillingController extends Controller
         $bill = Billing::find($id);            
         $bill->destroy($id);
         
-        Session::flash('msg', 'Data Successfully Deleted!!');
+        Session::flash('delete', 'Data Successfully Deleted!!');
         return redirect('/bills');
     }
 }

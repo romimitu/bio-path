@@ -7,13 +7,24 @@
     <main id="page-content-wrapper" role="main">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                <?php echo Form::open(['url' => 'bill/store', 'method'=>'post', 'files'=>true]); ?>
+                <?php echo Form::open(['url' => 'bill/store', 'target'=>'_blank', 'method'=>'post', 'files'=>true]); ?>
 
                   <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="panel-title">Registration Recruit Agent</div>
                     </div>
                     <div class="panel-body"> 
+                      <?php $date = date('dmy'); ?>
+                      <div class="form-group" style="display: none;"
+                        <?php echo Form::label('Reg No.', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::text('regno', 'BIO'.$date.$lastInsertedID->id, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+
+                        <?php echo Form::label('Reciept No', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::text('receipt', $date.$lastInsertedID->id , ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+
+                      </div>
                       <div class="form-group">
                         <?php echo Form::label('Name', null, ['class'=> 'col-sm-2']); ?>
 

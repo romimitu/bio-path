@@ -14,8 +14,9 @@ class CreateBillingsTable extends Migration
     public function up()
     {
         Schema::create('billings', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('receipt')->default('BIO');            
+            $table->Increments('id');
+            $table->string('regno');
+            $table->string('receipt');
             $table->string('name');            
             $table->string('father');            
             $table->string('country');            
@@ -33,7 +34,6 @@ class CreateBillingsTable extends Migration
             $table->string('image');
             $table->timestamps();
         });
-        DB::update("ALTER TABLE agents AUTO_INCREMENT = 100000;");
     }
 
     /**

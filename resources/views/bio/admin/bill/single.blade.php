@@ -28,7 +28,7 @@
                             <table class="table">
                                 <tr>
                                     <td>Reg. Number</td> 
-                                    <td>: {{ $bill->id }}</td>
+                                    <td>: {{ $bill->regno }}</td>
                                 </tr>
                                 <tr>
                                     <td>Name </td> 
@@ -68,11 +68,11 @@
                             <table class="table">
                                 <tr>
                                     <td>Reciept No</td>
-                                    <td></td>
+                                    <td>: {{ $bill->receipt }}</td>
                                 </tr>
                                 <tr>
                                     <td>Country</td>
-                                    <td>: {{ $bill->receipt }}-{{ $bill->id }}</td>
+                                    <td>: {{ $bill->country }}</td>
                                 </tr>
                                 <tr>
                                     <td>Medical Date</td>

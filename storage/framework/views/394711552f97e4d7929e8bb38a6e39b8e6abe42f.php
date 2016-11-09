@@ -17,7 +17,7 @@
                 </a>
                 <ul id="submenu-3" class="panel-collapse collapse panel-switch" role="menu">
                     <li><a href="/billing"><i class="fa fa-caret-right"></i>Create Bill</a></li>
-                    <li><a href="bills"><i class="fa fa-caret-right"></i>All Bills</a></li>
+                    <li><a href="/bills"><i class="fa fa-caret-right"></i>All Bills</a></li>
                 </ul>
             </li>                        
             <li><a href="#"><span class="sidebar-icon"><i class="fa fa-terminal"></i></span>

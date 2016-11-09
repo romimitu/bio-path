@@ -9,12 +9,19 @@
     <main id="page-content-wrapper" role="main">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                {!! Form::open(['url' => 'bill/store', 'method'=>'post', 'files'=>true]) !!}
+                {!! Form::open(['url' => 'bill/store', 'target'=>'_blank', 'method'=>'post', 'files'=>true]) !!}
                   <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="panel-title">Registration Recruit Agent</div>
                     </div>
                     <div class="panel-body"> 
+                      <?php $date = date('dmy'); ?>
+                      <div class="form-group" style="display: none;"
+                        {!! Form::label('Reg No.', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('regno', 'BIO'.$date.$lastInsertedID->id, ['class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
+                        {!! Form::label('Reciept No', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('receipt', $date.$lastInsertedID->id , ['class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
+                      </div>
                       <div class="form-group">
                         {!! Form::label('Name', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('name', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']) !!}

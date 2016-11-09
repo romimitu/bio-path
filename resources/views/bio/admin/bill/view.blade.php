@@ -14,7 +14,10 @@
                     <h2>Boi-Path Billing System</h2>  
                     @if (Session::has('msg'))
                         <div class="alert alert-info">{{ Session::get('msg') }}</div>
-                    @endif                   
+                    @endif        
+                    @if (Session::has('delete'))
+                        <div class="alert alert-danger">{{ Session::get('delete') }}</div>
+                    @endif             
                 </div>
                 <div class="panel-body">
                     <table class="table table-striped table-condensed table-responsive">
@@ -33,8 +36,8 @@
                         <tbody>
                         @foreach ($billing as $bill)
                             <tr>
-                                <td>{{ $bill->id }}</td>
-                                <td>{{ $bill->receipt }}-{{ $bill->id }}</td>
+                                <td>{{ $bill->regno }}</td>
+                                <td>{{ $bill->receipt }}</td>
                                 <td>{{ $bill->name }}</td>
                                 <td>{{ $bill->father }}</td>
                                 <td>{{ $bill->passport }}</td>

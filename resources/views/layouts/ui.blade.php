@@ -36,7 +36,7 @@
                 </li>
                 <li><a href="#"><i class="fa fa-envelope-o"></i> example@mail.com</a>
                 </li>
-                <li><a href="#"><i class="fa fa-phone"></i> 9357112</a>
+                <li><a href="#"><i class="fa fa-phone"></i> 9359112</a>
                 </li>
               </ul>
               <!-- End Contact Info -->
