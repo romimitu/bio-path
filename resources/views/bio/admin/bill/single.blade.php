@@ -9,21 +9,25 @@
     @include('layouts.sidebar')
     <main id="page-content-wrapper" role="main">
         <div class="col-sm-12">
-            <div class="panel panel-default">
+            <div class="single-bill panel-default">
                 <div class="panel-body single-bill">                    
-                    <div class="row">
-                        <div class="col-sm-3">
+                    <div class="row single-bill-header">
+                        <div class="col-sm-2" style="text-align: right;">
+                            <img class="img-responsive" src="{{ asset('images/assets/logo.png')}}"">
+                        </div>
+                        <div class="col-sm-8" align="center">
+                            <h3>Bio-Path Medical Services Ltd.</h3>
+                            <p>44, Naya Paltan (1st Floor). (Opposite to Paltan Thana), Dhaka-1000,</p>
+                            <p>Telephone: 9359112 or 01712964971</p>
+                            <a href="http://biopathmedical.com">www.biopathmedical.com</a>
+                            <div class="Page-title"><b>RECEIPT FO MEDICAL TEST</b></div>
+                        </div>
+                        <div class="col-sm-2">
                             <img class="img-responsive" src="{{ asset('uploads/'.$bill->image)}}" alt="{{ $bill->name }}">
                         </div>
-                        <div class="col-sm-6" align="center">
-                            <h3>Bio-Path Medical Services Ltd.</h3>
-                            <p>44, Naya Paltan (1st Floor). (Opposite to Paltan Thana),</p>
-                            <p>Dhaka-1000, Telephone: 9359112</p>
-                            <p>MONEY RECEIPT</p>
-                        </div>
-                        <div class="col-sm-3"></div>
                     </div>
-                    <div class="row">
+                    <hr/>
+                    <div class="row single-bill-body">
                         <div class="col-sm-6">
                             <table class="table">
                                 <tr>
@@ -35,8 +39,15 @@
                                     <td>: {{ $bill->name }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Father Name</td> 
-                                    <td>: {{ $bill->father }}</td> 
+                                    <td>Mobile No</td> 
+                                    <td>: {{ $bill->mobile }}</td> 
+                                </tr>
+                                    <td>Father Name </td> 
+                                    <td>: {{ $bill->father }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Mother Name</td> 
+                                    <td>: {{ $bill->mother }}</td> 
                                 </tr>
                                 <tr>
                                     <td>trasstrort No</td> 
@@ -71,6 +82,10 @@
                                     <td>: {{ $bill->receipt }}</td>
                                 </tr>
                                 <tr>
+                                    <td>Birth Date</td>
+                                    <td>: {{ $bill->birthday }}</td>
+                                </tr>
+                                <tr>
                                     <td>Country</td>
                                     <td>: {{ $bill->country }}</td>
                                 </tr>
@@ -79,12 +94,16 @@
                                     <td>: {{ $bill->medicaldate }}</td>
                                 </tr>
                                 <tr>
-                                    <td>GCC Slip Date</td>
+                                    <td>Slip Date</td>
                                     <td>: {{ $bill->slipdate }}</td>
                                 </tr>
                                 <tr>
+                                    <td>GCC Slip Date</td>
+                                    <td>: {{ $bill->gcc_slipdate }}</td>
+                                </tr>
+                                <tr>
                                     <td>GCC Epiry Date</td>
-                                    <td>: {{ $bill->expirydate }}</td>
+                                    <td>: {{ $bill->gcc_expirydate }}</td>
                                 </tr>
                                 <tr>
                                     <td>Report Delivery Date</td>
@@ -102,6 +121,7 @@
                     <hr/>
                     <div class="col-sm-12" align="center">
                         <p>When medical card will ready we will contact you via SMS or Phone call. For medical report please visit: www.biopathmedical.com</p>
+                        <a href="../bill/store" method="get">Print Preview</a>
                     </div>
                 </div>
             </div>

@@ -24,9 +24,9 @@
                         <thead>
                             <tr>
                                 <th>RegNo.</th>
-                                <th>Reciept</th>
                                 <th>Name</th>
                                 <th>Father</th>
+                                <th>Agent</th>
                                 <th>Passport</th>
                                 <th>Country</th>
                                 <th>Reporting Date</th>
@@ -37,13 +37,14 @@
                         @foreach ($billing as $bill)
                             <tr>
                                 <td>{{ $bill->regno }}</td>
-                                <td>{{ $bill->receipt }}</td>
                                 <td>{{ $bill->name }}</td>
                                 <td>{{ $bill->father }}</td>
+                                <td>{{ $bill->recrutoffice }}</td>
                                 <td>{{ $bill->passport }}</td>
                                 <td>{{ $bill->country }}</td>
                                 <td>{{ $bill->reportdate }}</td>
                                 <td>
+                                    <a href="{{ url('/#') }}" >Create Report</a> |
                                     <a href="{{ url('/bill/'. $bill->id) }}" >View</a> |
                                     <a class="delete" href="{{ url('/bill/'. $bill->id.'/delete') }}">Delete</a>
                                 </td>
@@ -55,10 +56,4 @@
             </div>
         </div>
     </main>
-
-<script>
-    $(".delete").on("submit", function(){
-        return confirm("Do you want to delete this item?");
-    });
-</script>
 @endsection

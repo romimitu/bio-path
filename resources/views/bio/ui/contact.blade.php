@@ -61,9 +61,9 @@
 
             <!-- Info - Icons List -->
             <ul class="icons-list">
-              <li><i class="fa fa-globe">  </i> <strong>Address:</strong> 44, Naya Paltan, Dhaka, Bangladesh.</li>
+              <li><i class="fa fa-globe">  </i> <strong>Address:</strong> 44, Naya Paltan (1st floor), Dhaka, Bangladesh.</li>
               <li><i class="fa fa-envelope-o"></i> <strong>Email:</strong> info@yourcompany.com</li>
-              <li><i class="fa fa-mobile"></i> <strong>Phone:</strong> 9357112</li>
+              <li><i class="fa fa-mobile"></i> <strong>Phone:</strong> 9357112 or 01712964971</li>
             </ul>
 
             <!-- Divider -->

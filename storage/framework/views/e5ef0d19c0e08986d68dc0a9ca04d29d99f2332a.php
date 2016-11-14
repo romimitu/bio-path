@@ -30,9 +30,9 @@
 
                         <?php echo Form::text('name', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
-                        <?php echo Form::label('Country', null, ['class'=> 'col-sm-2']); ?>
+                        <?php echo Form::label('Mobile', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('country', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+                        <?php echo Form::text('mobile', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
                       </div>
                       <div class="form-group">
@@ -40,9 +40,29 @@
 
                         <?php echo Form::text('father', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
+                        <?php echo Form::label('Birth Date', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::text('birthday', null, ['class'=> 'form-control col-sm-4 datepicker', 'required' => 'required']); ?>
+
+                      </div>
+                      <div class="form-group">
+                        <?php echo Form::label('Mother Name', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::text('mother', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+
                         <?php echo Form::label('Medical Date', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('medicaldate', null, ['class'=> 'form-control col-sm-4 datepicker', 'required' => 'required']); ?>
+                        <?php echo Form::text('medicaldate', null, ['class'=> 'form-control col-sm-4 datepicker']); ?>
+
+                      </div>
+                      <div class="form-group">
+                        <?php echo Form::label('Country', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::text('country', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+
+                        <?php echo Form::label('Slip Date', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::text('slipdate', null, ['class'=> 'form-control col-sm-4 datepicker', 'required' => 'required']); ?>
 
                       </div>
                       <div class="form-group">
@@ -52,20 +72,20 @@
 
                         <?php echo Form::label('GCC Slip Date', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('slipdate', null, ['class'=> 'form-control col-sm-4 datepicker', 'required' => 'required']); ?>                        
+                        <?php echo Form::text('gcc_slipdate', null, ['class'=> 'form-control col-sm-4 datepicker']); ?>                        
                       </div>
                       <div class="form-group">
-                        <?php echo Form::label('Recruting Office', null, ['class'=> 'col-sm-2']); ?>
+                        <?php echo Form::label('Recruit Agent', null, ['class'=> 'col-sm-2']); ?>
 
                         <?php echo Form::text('recrutoffice', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
                         <?php echo Form::label('GCC Expiry Date', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('expirydate', null, ['class'=> 'form-control col-sm-4 datepicker', 'required' => 'required']); ?>
+                        <?php echo Form::text('gcc_expirydate', null, ['class'=> 'form-control col-sm-4 datepicker']); ?>
 
                       </div>
                       <div class="form-group">
-                        <?php echo Form::label('Recruting Contact', null, ['class'=> 'col-sm-2']); ?>
+                        <?php echo Form::label('Recruit Contact', null, ['class'=> 'col-sm-2']); ?>
 
                         <?php echo Form::text('recrutingcontact', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
@@ -81,7 +101,7 @@
 
                         <?php echo Form::label('Report Delivery Time', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('reporttime', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+                        <?php echo Form::text('reporttime', null, ['class'=> 'form-control col-sm-4']); ?>
 
                       </div>                      
                       <div class="form-group">
@@ -91,7 +111,7 @@
 
                         <?php echo Form::label('Password', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('password', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+                        <?php echo Form::text('password', 123, ['class'=> 'form-control col-sm-4']); ?>
 
                       </div>
                       <div class="form-group">                      

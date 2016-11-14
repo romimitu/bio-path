@@ -32,11 +32,11 @@
             <div class="col-md-7">
               <!-- Start Contact Info -->
               <ul class="contact-details">
-                <li><a href="#"><i class="fa fa-map-marker"></i> 44, Naya Paltan, Dhaka, BD</a>
+                <li><a href="#"><i class="fa fa-map-marker"></i> 44, Naya Paltan (1st floor), Dhaka, BD</a>
                 </li>
                 <li><a href="#"><i class="fa fa-envelope-o"></i> example@mail.com</a>
                 </li>
-                <li><a href="#"><i class="fa fa-phone"></i> 9359112</a>
+                <li><a href="#"><i class="fa fa-phone"></i> 9359112 or 01712964971</a>
                 </li>
               </ul>
               <!-- End Contact Info -->
@@ -199,7 +199,7 @@
             <div class="footer-widget contact-widget">
               <h4><img src="images/assets/logo.png" class="img-responsive" alt="Footer Logo" /></h4>
               <ul>
-                <li><span>Phone Number:</span> 9357112</li>
+                <li><span>Phone Number:</span> 9359112 or 01712964971</li>
                 <li><span>Email:</span> company@company.com</li>
                 <li><span>Website:</span> www.biopathmedical.com</li>
               </ul>
@@ -214,7 +214,7 @@
         <div class="copyright-section">
           <div class="row">
             <div class="col-md-6">
-              <p>&copy; 2014 Margo - All Rights Reserved <a href="http://graygrids.com">GrayGrids</a> </p>
+              <p>&copy; 2016 - All Rights Reserved <a href="http://lbdesignit.com">LBDesignIT</a> </p>
             </div>
             <!-- .col-md-6 -->
             <div class="col-md-6">

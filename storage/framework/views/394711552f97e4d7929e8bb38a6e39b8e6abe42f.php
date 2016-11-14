@@ -1,4 +1,3 @@
-
 <div id="sidebar-wrapper">
     <aside id="sidebar">
         <ul id="sidemenu" class="sidebar-nav">

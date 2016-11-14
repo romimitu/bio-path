@@ -15,11 +15,11 @@ class CreateAgentsTable extends Migration
     {
         Schema::create('agents', function (Blueprint $table) {
             $table->bigIncrements('id')->unsigned();
-            $table->string('name')->nullable();
+            $table->string('name');
             $table->string('email')->nullable();
-            $table->string('mobile')->nullable();
-            $table->string('address')->nullable();
-            $table->string('activity')->nullable();
+            $table->string('mobile');
+            $table->string('address');
+            $table->string('activity');
             $table->timestamps();
         });
         DB::update("ALTER TABLE agents AUTO_INCREMENT = 100000;");

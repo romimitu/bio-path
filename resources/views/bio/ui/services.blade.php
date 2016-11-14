@@ -55,11 +55,25 @@
 
           </div>
 
-          <!-- Divider -->
           <div class="hr1" style="margin-bottom:45px;"></div>
 
           <div class="row">
+            <div class="col-md-4">
 
+              <!-- Classic Heading -->
+              <h4 class="classic-title"><span>Our Services</span></h4>
+                <li>Clinical Hematology</li>
+                <li>Clinical Pathology</li>
+                <li>Biochemistry</li>
+                <li>Immunology & Serology</li>
+                <li>Histopathology</li>
+                <li>Microbiology</li>
+                <li>E.C.G</li>
+                <li>U.liS.G</li>
+                <li>X-Ray</li>
+                <li>Others</li>
+
+            </div>
             <div class="col-md-4">
 
               <!-- Classic Heading -->
@@ -121,7 +135,7 @@
 
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-4">
 
               <!-- Classic Heading -->
               <h4 class="classic-title"><span>Our Features</span></h4>
@@ -129,7 +143,7 @@
               <div class="row">
 
                 <!-- Start Service Icon 1 -->
-                <div class="col-md-6 service-box service-icon-left-more">
+                <div class="service-box service-icon-left-more">
                   <div class="service-icon">
                     <i class="fa fa-magic icon-medium"></i>
                   </div>
@@ -141,7 +155,7 @@
                 <!-- End Service Icon 1 -->
 
                 <!-- Start Service Icon 3 -->
-                <div class="col-md-6 service-box service-icon-left-more">
+                <div class="service-box service-icon-left-more">
                   <div class="service-icon">
                     <i class="fa fa-globe icon-medium"></i>
                   </div>
@@ -153,7 +167,7 @@
                 <!-- End Service Icon 3 -->
 
                 <!-- Start Service Icon 4 -->
-                <div class="col-md-6 service-box service-icon-left-more">
+                <div class="service-box service-icon-left-more">
                   <div class="service-icon">
                     <i class="fa fa-picture-o icon-medium"></i>
                   </div>
@@ -165,7 +179,7 @@
                 <!-- End Service Icon 4 -->
 
                 <!-- Start Service Icon 2 -->
-                <div class="col-md-6 service-box service-icon-left-more">
+                <div class="service-box service-icon-left-more">
                   <div class="service-icon">
                     <i class="fa fa-users icon-medium"></i>
                   </div>
