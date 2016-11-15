@@ -77,4 +77,13 @@ class BillingController extends Controller
         Session::flash('delete', 'Data Successfully Deleted!!');
         return redirect('/bills');
     }
+
+
+    public function print(Request $request)
+    {
+        $data = Billing::find($id);
+        $pdf = \PDF::loadView('pdf.invoice', $data);
+        return $pdf->stream('invoice.pdf');
+    }
+
 }

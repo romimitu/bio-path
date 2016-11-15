@@ -8,7 +8,7 @@
 <div id="wrapper">
     @include('layouts.sidebar')
     <main id="page-content-wrapper" role="main">
-        <div class="col-sm-12">
+        <div class="col-sm-8 col-sm-offset-2">
             <div class="single-bill panel-default">
                 <div class="panel-body single-bill">                    
                     <div class="row single-bill-header">
@@ -120,7 +120,7 @@
                     </div>
                     <hr/>
                     <div class="col-sm-12" align="center">
-                        <p>When medical card will ready we will contact you via SMS or Phone call. For medical report please visit: www.biopathmedical.com</p>
+                        <p>When medical card will ready we will contact you. For medical report please visit: biopathmedical.com</p>
                         <a href="../bill/store" method="get">Print Preview</a>
                     </div>
                 </div>

@@ -10,6 +10,10 @@
         h3{margin: 5px;}
         p {margin: 0 0 5px;}
         .pdf-body{border: 5px double #000;margin-bottom: 20px;}
+        @font-face{
+            font-family: 'Oswald', 'Ubuntu', 'Titillium Web';
+            src:url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Titillium+Web');
+        }
     </style>
 </head>
 

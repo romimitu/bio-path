@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6{font-family: 'Oswald', sans-serif;}
 
 
 .form-control {height: 27px;padding: 2px 5px;border-radius:0;}
-.single-bill .table>tbody>tr>td{border: 0px;padding: 5px;line-height: 1.2;color: #000;}
+.single-bill .table>tbody>tr>td{border: 0px;padding: 4px;line-height: 1;color: #000;}
 .panel-info>.panel-heading {color: #fff;background-color: #009688;border-color: #009688;}
 .panel {background:#eee;}
 .panel-info {border-color: #009688;}
