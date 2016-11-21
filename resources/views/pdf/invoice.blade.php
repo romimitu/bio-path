@@ -5,11 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen">
     <link href="/css/style.css" rel="stylesheet">
+    <title>Bio-Path Medical Services Ltd</title>
     <style>
         body{margin: 5px;padding: 5px;}
         h3{margin: 5px;}
         p {margin: 0 0 5px;}
         .pdf-body{border: 5px double #000;margin-bottom: 20px;}
+        .pdf-body tr td {font-size: 13px;}
         @font-face{
             font-family: 'Oswald', 'Ubuntu', 'Titillium Web';
             src:url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Titillium+Web');
@@ -139,7 +141,7 @@
         </div>
     </div>
 
-
+<br/>
 
     <div class="col-sm-12 pdf-body">
         <table>

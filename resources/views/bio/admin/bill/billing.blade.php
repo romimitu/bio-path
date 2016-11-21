@@ -12,7 +12,7 @@
                 {!! Form::open(['url' => 'bill/store', 'target'=>'_blank', 'method'=>'post', 'files'=>true]) !!}
                   <div class="panel panel-info">
                     <div class="panel-heading">
-                        <div class="panel-title">Registration Recruit Agent</div>
+                        <div class="panel-title">Reciept for Medical Test</div>
                     </div>
                     <div class="panel-body"> 
                       <?php $date = date('dmy'); ?>

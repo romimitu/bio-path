@@ -20,7 +20,10 @@
                     @endif             
                 </div>
                 <div class="panel-body" id="allbill">
-                    <input class="search" placeholder="Search" />
+                    <div class="form-group">
+                        <label class="col-sm-2" for="filter">Filter :</label>
+                        <input class="search form-control col-sm-3" placeholder="Search" />
+                    </div>               
                     <table class="table table-striped table-condensed table-responsive">
                         <thead>
                             <tr>
@@ -45,8 +48,9 @@
                                 <td>{{ $bill->country }}</td>
                                 <td>{{ $bill->reportdate }}</td>
                                 <td>
-                                    <a href="{{ url('/#') }}" >Create Report</a> |
-                                    <a href="{{ url('/bill/'. $bill->id) }}" >View</a> |
+                                    <a href="{{ url('/testreports/create/'. $bill->id) }}" >Create Report</a> |
+                                    <a href="{{ url('/#') }}" >View Report</a> |
+                                    <a href="{{ url('/bill/'. $bill->id) }}" >View bill</a> |
                                     <a class="delete" href="{{ url('/bill/'. $bill->id.'/delete') }}">Delete</a>
                                 </td>
                             </tr>

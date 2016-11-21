@@ -79,7 +79,7 @@ class BillingController extends Controller
     }
 
 
-    public function print(Request $request)
+    public function preview($id)
     {
         $data = Billing::find($id);
         $pdf = \PDF::loadView('pdf.invoice', $data);

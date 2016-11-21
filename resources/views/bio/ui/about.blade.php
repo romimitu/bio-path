@@ -27,7 +27,7 @@
       <div class="container">
         <div class="page-content">
           <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-9">
               <!-- Classic Heading -->
               <h4 class="classic-title"><span>Welcome To Bio-Paath</span></h4>
               <!-- Some Text -->
@@ -42,11 +42,13 @@ G) Libya
 The Company is managed by highly motivated professionals with expert knowledge and specialization in all modern diagnostic Machineries. A team of qualified Doctors and technicians who are capable, dynamic and industrious persons staffs the organization. We always use with other standard laboratories in Bangladesh. This computerized Medical centre is centrally Air Conditioned, Equipped with all kinds of advanced Medical Equipment. Over last 22 years of its operation Bio-path has established herself as a prominent brand in these services. 
 </p>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-3">
               <!-- Start Touch Slider -->
               <div class="touch-slider" data-slider-navigation="true" data-slider-pagination="true">
-                <div class="item"><img alt="" src="images/about-01.jpg"></div>
-              </div>
+                <div class="item">
+                  <img class="img-responsive" alt="" src="images/assets/ceo.jpg"></div>
+                  <h4>Chairman</h4>
+                </div>
               <!-- End Touch Slider -->
             </div>
           </div>

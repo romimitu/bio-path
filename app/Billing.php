@@ -14,4 +14,10 @@ class Billing extends Model
 		'gcc_expirydate', 'recrutingcontact', 'reportdate',	'medicalfee', 'reporttime',
 		'remarks', 'password', 'image'
     ];
+
+
+    public function testreport()
+    {
+        return $this->hasOne('App\Testreport');
+    }
 }

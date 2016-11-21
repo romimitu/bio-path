@@ -39,3 +39,13 @@ Route::get('/billing', 'BillingController@create' );
 Route::post('/bill/store', 'BillingController@store' );
 Route::get('/bill/{id}', 'BillingController@show' );
 Route::get('bill/{id}/delete', 'BillingController@destroy');
+
+Route::get('bill/preview/{id}', 'BillingController@preview');
+
+// For Admin Sections Billing System
+
+Route::resource('testreports', 'TestReportController' );
+
+Route::get('/testreports/create/{id}', 'TestReportController@create' );
+Route::post('/testreports/store', 'TestReportController@store' );
+Route::get('/testreports/{id}', 'TestReportController@show' );

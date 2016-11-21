@@ -121,7 +121,7 @@
                     <hr/>
                     <div class="col-sm-12" align="center">
                         <p>When medical card will ready we will contact you. For medical report please visit: biopathmedical.com</p>
-                        <a href="../bill/store" method="get">Print Preview</a>
+                        <a href="{{ url('/bill/preview/'. $bill->id) }}" target="_blank">Print Preview</a>
                     </div>
                 </div>
             </div>

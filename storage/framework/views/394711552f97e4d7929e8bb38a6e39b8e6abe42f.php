@@ -18,7 +18,17 @@
                     <li><a href="/billing"><i class="fa fa-caret-right"></i>Create Bill</a></li>
                     <li><a href="/bills"><i class="fa fa-caret-right"></i>All Bills</a></li>
                 </ul>
-            </li>                        
+            </li>   
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-4">
+                    <span class="sidebar-icon"><i class="fa-stethoscope"></i></span>
+                    <span class="sidebar-title">Medical Test</span>                
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
+                    <li><a href="/bills"><i class="fa fa-caret-right"></i>All Test Report</a></li>
+                </ul>
+            </li>                      
             <li><a href="#"><span class="sidebar-icon"><i class="fa fa-terminal"></i></span>
                 <span class="sidebar-title">Report</span></a>
             </li>
