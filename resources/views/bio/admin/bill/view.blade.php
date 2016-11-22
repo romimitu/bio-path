@@ -49,7 +49,7 @@
                                 <td>{{ $bill->reportdate }}</td>
                                 <td>
                                     <a href="{{ url('/testreports/create/'. $bill->id) }}" >Create Report</a> |
-                                    <a href="{{ url('/#') }}" >View Report</a> |
+                                    <a href="{{ url('/testreports/'. $bill->id) }}" >View Report</a> |
                                     <a href="{{ url('/bill/'. $bill->id) }}" >View bill</a> |
                                     <a class="delete" href="{{ url('/bill/'. $bill->id.'/delete') }}">Delete</a>
                                 </td>

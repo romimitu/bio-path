@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AgentsTableSeeder' => $baseDir . '/database/seeds/AgentsTableSeeder.php',
+    'BillingTableSeeder' => $baseDir . '/database/seeds/BillingTableSeeder.php',
     'Cpdf' => $vendorDir . '/dompdf/dompdf/lib/Cpdf.php',
     'CreateAgentsTable' => $baseDir . '/database/migrations/2016_11_02_092354_create_agents_table.php',
     'CreateBillingsTable' => $baseDir . '/database/migrations/2016_11_03_090609_create_billings_table.php',

@@ -14,7 +14,9 @@ class CreateTestReportsTable extends Migration
     public function up()
     {
         Schema::create('testreports', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id');     
+            $table->integer('billing_id')->unsigned();
+            $table->foreign('billing_id')->references('id')->on('billings')->onDelete('cascade');
             $table->string('gcccode');
             $table->string('gccslipno');
             $table->string('height');

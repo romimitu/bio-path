@@ -21,21 +21,25 @@ class TestReportController extends Controller
         //
     }
 
-    public function create()
+    public function create($id)
     {
-        return view('bio.admin.testreport.create');
+        $billdata = Billing::find($id);
+        return view('bio.admin.testreport.create', [ 'billdata'=>$billdata ]);
     }
 
-    public function store(Billing $id, Request $request)
+    public function store(Request $request, Billing $id)
     {
-        $testdata = $request->all();
-        Testreport::create($testdata);
+        Billing::get($id);
+        $billing_id=billings()->id;
+        $profiledata = $request->all()->attach('billing_id');
+        Testreport::create($profiledata);
         return redirect('/bills');
     }
 
     public function show($id)
     {
-        //
+        $reports = Testreport::find($id);
+        return view('bio.admin.testreport.view', ['report' => $reports]);
     }
 
     public function edit($id)

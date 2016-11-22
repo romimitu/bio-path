@@ -14,7 +14,7 @@ class CreateBillingsTable extends Migration
     public function up()
     {
         Schema::create('billings', function (Blueprint $table) {
-            $table->Increments('id');
+            $table->Increments('id');  
             $table->string('regno');
             $table->string('receipt');
             $table->string('name');            

@@ -312,6 +312,7 @@ class ComposerStaticInit230b313ed77a7a2d334db40e05e3b42d
 
     public static $classMap = array (
         'AgentsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AgentsTableSeeder.php',
+        'BillingTableSeeder' => __DIR__ . '/../..' . '/database/seeds/BillingTableSeeder.php',
         'Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
         'CreateAgentsTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_02_092354_create_agents_table.php',
         'CreateBillingsTable' => __DIR__ . '/../..' . '/database/migrations/2016_11_03_090609_create_billings_table.php',
