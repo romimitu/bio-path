@@ -47,5 +47,5 @@ Route::get('bill/preview/{id}', 'BillingController@preview');
 Route::resource('testreports', 'TestReportController' );
 
 Route::get('/testreports/create/{id}', 'TestReportController@create' );
-Route::post('/testreports/store', 'TestReportController@store' );
+Route::post('/testreports/store/{id}', 'TestReportController@store' );
 Route::get('/testreports/{id}', 'TestReportController@show' );

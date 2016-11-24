@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Testreport extends Model
 {
     protected $fillable = [
-        'gcccode','gccslipno','height','weight','nationality','profession','visano','visadate',
+        'billing_id','gcccode','gccslipno','height','weight','nationality','profession','visano','visadate',
         'mofano','eye','commet','bp','heart','lungs','chestxray','abdomen','herina',
         'varicoseveins','extremities','deformities','skin','venerealdiseases','cns',
         'psychiatry','sugar','albumin','bilharziasis','helminthes','giardia',

@@ -9,7 +9,7 @@
     <main id="page-content-wrapper" role="main">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                {!! Form::open(['url' => 'testreports/store', 'method'=>'post']) !!}
+                {!! Form::open(['url' => 'testreports/store/'.$billdata->id, 'method'=>'post']) !!}
                   <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="panel-title">Medical Test Report</div>
