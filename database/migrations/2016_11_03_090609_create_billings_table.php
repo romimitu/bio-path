@@ -22,11 +22,13 @@ class CreateBillingsTable extends Migration
             $table->string('birthday');            
             $table->string('father');            
             $table->string('mother');            
-            $table->string('country');            
+            $table->string('country');
+            $table->string('gender');
+            $table->string('maritial_status');
             $table->string('passport')->unique();            
             $table->string('recrutoffice');            
             $table->string('recrutingcontact');            
-            $table->string('medicaldate');            
+            $table->string('nationality');            
             $table->string('slipdate');            
             $table->string('gcc_slipdate');            
             $table->string('gcc_expirydate');            

@@ -21,13 +21,13 @@ class CreateTestReportsTable extends Migration
             $table->string('gccslipno');
             $table->string('height');
             $table->string('weight');
-            $table->string('nationality');
             $table->string('profession');
             $table->string('visano');
             $table->string('visadate');
             $table->string('mofano');
             $table->string('eye');
             $table->string('commet');
+            $table->string('ear');
             $table->string('bp');
             $table->string('heart');
             $table->string('lungs');
@@ -54,6 +54,7 @@ class CreateTestReportsTable extends Migration
             $table->string('thickfilmfor');
             $table->string('malaria');
             $table->string('microfilaria');
+            $table->string('remarks');
             $table->string('rbs');
             $table->string('lfts');
             $table->string('creatinine');

@@ -14,7 +14,7 @@ class AgentsController extends Controller
 
     public function index()
     {
-        $allAgents = Agent::all();
+        $allAgents = Agent::orderBy('created_at', 'desc')->paginate();
         return view('bio.admin.agent.agents', ['agents' => $allAgents]);
     }
 

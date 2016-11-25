@@ -15,7 +15,7 @@ class BillingController extends Controller
     }
     public function index()
     {        
-        $allbills = Billing::all();
+        $allbills = Billing::orderBy('created_at', 'desc')->paginate();
         return view('bio.admin.bill.view', ['billing' => $allbills]);
     }
 

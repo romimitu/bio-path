@@ -50,9 +50,19 @@
 
                         <?php echo Form::text('mother', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
-                        <?php echo Form::label('Medical Date', null, ['class'=> 'col-sm-2']); ?>
+                        <?php echo Form::label('Nationality', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('medicaldate', null, ['class'=> 'form-control col-sm-4 datepicker']); ?>
+                        <?php echo Form::text('nationality', null, ['class'=> 'form-control col-sm-4']); ?>
+
+                      </div>
+                      <div class="form-group">
+                        <?php echo Form::label('Gender', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::select('gender', ['Male' => 'Male', 'Female' => 'Female'], 'Select', ['class'=> 'form-control col-sm-4']); ?>
+
+                        <?php echo Form::label('Maritial Status', null, ['class'=> 'col-sm-2']); ?>
+
+                        <?php echo Form::select('maritial_status', ['Married' => 'Married', 'Unmarried' => 'Unmarried'], 'Select', ['class'=> 'form-control col-sm-4']); ?>
 
                       </div>
                       <div class="form-group">

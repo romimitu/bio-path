@@ -37,8 +37,14 @@
                       <div class="form-group">
                         {!! Form::label('Mother Name', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('mother', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
-                        {!! Form::label('Medical Date', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('medicaldate', null, ['class'=> 'form-control col-sm-4 datepicker']) !!}
+                        {!! Form::label('Nationality', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('nationality', null, ['class'=> 'form-control col-sm-4']) !!}
+                      </div>
+                      <div class="form-group">
+                        {!! Form::label('Gender', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::select('gender', ['Male' => 'Male', 'Female' => 'Female'], 'Select', ['class'=> 'form-control col-sm-4']) !!}
+                        {!! Form::label('Maritial Status', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::select('maritial_status', ['Married' => 'Married', 'Unmarried' => 'Unmarried'], 'Select', ['class'=> 'form-control col-sm-4']) !!}
                       </div>
                       <div class="form-group">
                         {!! Form::label('Country', null, ['class'=> 'col-sm-2']) !!}

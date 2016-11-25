@@ -44,8 +44,7 @@ Route::get('bill/preview/{id}', 'BillingController@preview');
 
 // For Admin Sections Billing System
 
-Route::resource('testreports', 'TestReportController' );
-
+Route::get('/testreports', 'TestReportController@index' );
 Route::get('/testreports/create/{id}', 'TestReportController@create' );
 Route::post('/testreports/store/{id}', 'TestReportController@store' );
-Route::get('/testreports/{id}', 'TestReportController@show' );
+Route::get('/testreports/view/{id}', 'TestReportController@show' );

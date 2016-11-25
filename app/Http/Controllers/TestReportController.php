@@ -18,7 +18,8 @@ class TestReportController extends Controller
     }
     public function index()
     {
-        //
+        $reports = Testreport::orderBy('created_at', 'desc')->with('billing')->paginate();
+        return view('bio.admin.testreport.index', ['reports' => $reports]);
     }
 
     public function create($id)
@@ -29,10 +30,11 @@ class TestReportController extends Controller
 
     public function store($id,Request $request)
     {
-        $testrepor=$request->all();
-        $testrepor['billing_id']=$id;
-        Testreport::create($testrepor);
-        return redirect('/bills');
+        $testreport=$request->all();
+        $testreport['billing_id']=$id;
+        Testreport::create($testreport);
+        Session::flash('msg', 'Data Successfully Save!!');
+        return redirect('/testreports');
     }
 
     public function show($id)

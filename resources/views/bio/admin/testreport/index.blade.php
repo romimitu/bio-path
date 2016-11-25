@@ -30,27 +30,24 @@
                                 <th>RegNo.</th>
                                 <th>Name</th>
                                 <th>Father</th>
-                                <th>Agent</th>
                                 <th>Passport</th>
-                                <th>Country</th>
-                                <th>Reporting Date</th>
+                                <th>Visa</th>
+                                <th>MOFANO</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody class="list">
-                        @foreach ($billing as $bill)
+                        @foreach ($reports as $report)
                             <tr>
-                                <td class="regno">{{ $bill->regno }}</td>
-                                <td class="name">{{ $bill->name }}</td>
-                                <td>{{ $bill->father }}</td>
-                                <td class="recrutoffice">{{ $bill->recrutoffice }}</td>
-                                <td class="passport">{{ $bill->passport }}</td>
-                                <td>{{ $bill->country }}</td>
-                                <td>{{ $bill->reportdate }}</td>
+                                <td class="regno">{{ $report->billing->regno }}</td>
+                                <td class="name">{{ $report->billing->name }}</td>
+                                <td>{{ $report->billing->father }}</td>
+                                <td class="passport">{{ $report->billing->passport }}</td>
+                                <td>{{ $report->visano }}</td>
+                                <td>{{ $report->mofano }}</td>
                                 <td>
-                                    <a href="{{ url('/testreports/create/'. $bill->id) }}" >Create Report</a> |
-                                    <a href="{{ url('/bill/'. $bill->id) }}" >View bill</a> |
-                                    <a class="delete" href="{{ url('/bill/'. $bill->id.'/delete') }}">Delete</a>
+                                    <a href="{{ url('/testreports/view/'. $report->id) }}" >View Report</a> |
+                                    <a class="delete" href="{{ url('/testreports/'. $report->id.'/delete') }}">Delete</a>
                                 </td>
                             </tr>
                         @endforeach

@@ -79,8 +79,7 @@
                 </div>                       
                 <div class="form-group">
                     {!! Form::label('Activity', null, ['class'=> 'col-sm-3']) !!}
-                    {!! Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'],
-                    'Active', ['class'=> 'form-control col-sm-9']) !!}
+                    {!! Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'], 'Active', ['class'=> 'form-control col-sm-9']) !!}
                 </div>
                 {!! Form::submit('Submit', ['class'=> 'btn btn-primary']) !!}
             {!! Form::close() !!}

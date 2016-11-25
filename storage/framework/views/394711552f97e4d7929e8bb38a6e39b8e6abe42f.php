@@ -26,7 +26,7 @@
                     <b class="caret"></b>
                 </a>
                 <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
-                    <li><a href="/bills"><i class="fa fa-caret-right"></i>All Test Report</a></li>
+                    <li><a href="/testreports"><i class="fa fa-caret-right"></i>All Test Report</a></li>
                 </ul>
             </li>                      
             <li><a href="#"><span class="sidebar-icon"><i class="fa fa-terminal"></i></span>

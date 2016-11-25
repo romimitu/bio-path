@@ -10,9 +10,9 @@ class Billing extends Model
 
 	protected $fillable = [
 		'regno', 'receipt', 'name', 'mobile', 'birthday', 'country', 'father', 'mother',
-		'medicaldate', 'passport', 'slipdate', 'recrutoffice', 'gcc_slipdate', 
-		'gcc_expirydate', 'recrutingcontact', 'reportdate',	'medicalfee', 'reporttime',
-		'remarks', 'password', 'image'
+		'gender','maritial_status','nationality', 'passport', 'slipdate', 'recrutoffice', 
+		'gcc_slipdate', 'gcc_expirydate', 'recrutingcontact', 'reportdate',	'medicalfee', 
+		'reporttime','remarks', 'password', 'image'
     ];
 
 

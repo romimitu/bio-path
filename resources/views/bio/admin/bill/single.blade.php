@@ -50,7 +50,11 @@
                                     <td>: {{ $bill->mother }}</td> 
                                 </tr>
                                 <tr>
-                                    <td>trasstrort No</td> 
+                                    <td>Gender</td> 
+                                    <td>: {{ $bill->gender }}</td> 
+                                </tr>
+                                <tr>
+                                    <td>Passport No</td> 
                                     <td>: {{ $bill->passport }}</td>
                                 </tr>
                                 <tr>
@@ -90,8 +94,12 @@
                                     <td>: {{ $bill->country }}</td>
                                 </tr>
                                 <tr>
-                                    <td>Medical Date</td>
-                                    <td>: {{ $bill->medicaldate }}</td>
+                                    <td>Nationality</td>
+                                    <td>: {{ $bill->nationality }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Maritial Status</td>
+                                    <td>: {{ $bill->maritial_status }}</td>
                                 </tr>
                                 <tr>
                                     <td>Slip Date</td>
