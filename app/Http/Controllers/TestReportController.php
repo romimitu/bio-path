@@ -29,9 +29,9 @@ class TestReportController extends Controller
 
     public function store($id,Request $request)
     {
-        $testreportInput=$request->all();
-        $testreportInput['billing_id']=$id;
-        Testreport::create($testreportInput);
+        $testrepor=$request->all();
+        $testrepor['billing_id']=$id;
+        Testreport::create($testrepor);
         return redirect('/bills');
     }
 

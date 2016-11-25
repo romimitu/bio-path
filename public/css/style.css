@@ -53,12 +53,14 @@ h1,h2,h3,h4,h5,h6{font-family: 'Oswald', sans-serif;}
 .form-control {height: 27px;padding: 2px 5px;border-radius:0;}
 .single-bill .table>tbody>tr>td{border: 0px;padding: 4px;line-height: 1;color: #000;
     font-size: 13px;}
+.single-report .table>tbody>tr>td{padding: 4px;line-height: 1;color: #000;
+    font-size: 13px;}
 .panel-info>.panel-heading {color: #fff;background-color: #009688;border-color: #009688;}
 .panel {background:#eee;}
 .panel-info {border-color: #009688;}
 
-.single-bill{background: #fff;}
-.single-bill-header h3{margin: 0;font-family: 'Oswald', sans-serif;font-size: 30px;
+.single-bill, .single-report{background: #fff;}
+.single-bill-header h3{margin: 0;font-family: 'Oswald', sans-serif;font-size: 23px;
 color: #ff1100;letter-spacing: 4px;}
 .single-bill-header p{margin: 0;font-family: 'Ubuntu', sans-serif;color: #000;}
 .single-bill-header div.Page-title {margin:5px 0px;}
@@ -66,3 +68,5 @@ color: #ff1100;letter-spacing: 4px;}
     color: #000;}
 .single-bill-body{margin-top: 10px;}
 .form-group {margin-bottom: 5px;}
+.report-para p{font-size: 10px;}
+.test-list table thead tr td{text-align: center;color: #000;font-weight: 700;}
