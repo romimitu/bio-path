@@ -172,24 +172,6 @@
         <hr/>
         <table>
             <tr>
-                <td style="width: 100px;text-align: right;">
-                    <img src="images/assets/logo.png" width="90" height="70" class="img-responsive">
-                </td>
-                <td style="text-align: center;width: 460px">
-                    <h3 style="margin: 0;font-size: 28px;color: #ff1100;line-height: 18px;">Bio-Path Medical Services Ltd.</h3>
-                    <p style="margin: 0;color: #000;font-size: 14px;">44, Naya Paltan (1st Floor). (Opposite to Paltan Thana),Dhaka-1000,</p>
-                    <p style="margin: 0;color: #000;font-size: 14px;">Telephone: 9359112 or 01712964971</p>
-                    <a href="http://biopathmedical.com">www.biopathmedical.com</a>
-                    <p style="margin:5px 0px;"><u><b style="border: 2px solid #000;padding: 3px;background: #ccc;color: #000;">RECEIPT FOR MEDICAL REPORT</b></u></p>
-                </td>
-                <td style="width: 120px;">
-                    <img src="uploads/{{$image}}" alt="{{$image}}" width="120" height="110" class="img-responsive">
-                </td>
-            </tr>
-        </table>  
-        <hr/>
-        <table>
-            <tr>
                 <td style="width: 50px;"> </td>
                 <td class="col-sm-6">
                     <table class="table">
