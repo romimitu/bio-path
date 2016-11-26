@@ -1,12 +1,25 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen">
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Bio-Path Medical Services Ltd</title>
+    <style>
+        body{margin: 5px;padding: 5px;}
+        h3{margin: 5px;}
+        p {margin: 0 0 5px;}
+        .pdf-body{border: 5px double #000;margin-bottom: 20px;}
+        .pdf-body tr td {font-size: 13px;}
+        @font-face{
+            font-family: 'Oswald', 'Ubuntu', 'Titillium Web';
+            src:url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Titillium+Web');
+        }
+    </style>
+</head>
 
-@section('content')
-<style>
-.form-group{overflow: hidden;}
-
-</style>
-<div id="wrapper">
-    @include('layouts.sidebar')
+<body>
     <main id="page-content-wrapper" role="main">
         <div class="col-sm-12">
             <div class="single-report panel-default">
@@ -14,7 +27,7 @@
                     <div class="row single-bill-header">                     
                         <div class="Page-title" style="text-align: center;"><b>MEDICAL TEST REPORT</b></div>
                         <div class="col-sm-2" style="text-align: right;">
-                            <img class="img-responsive" src="{{ asset('images/assets/logo.png')}}"">
+                            <img class="img-responsive" src="#">
                         </div>
                         <div class="col-sm-5">
                             <h3>Bio-Path Medical Services Ltd.</h3>
@@ -29,7 +42,7 @@
                                 <tbody>
                                     <tr>
                                         <td>G.C.C Code</td>
-                                        <td><b>${{$report->gcccode }}</b></td>
+                                        <td><b>{{$report->gcccode }}</b></td>
                                     </tr>
                                     <tr>
                                         <td>G.C.C Slip no</td>
@@ -93,7 +106,7 @@
                             </table>
                         </div>
                         <div class="col-sm-2">
-                            <img class="img-responsive" src="{{ asset('uploads/'.$report->billing->image)}}"">
+                            <img class="img-responsive" src="#">
                         </div>
                     </div>                    
                     <div class="col-sm-12 report-para">
@@ -265,7 +278,7 @@
                             </table>
                         </div>                        
                     </div>
-                    <div class="rorw">
+                    <div class="row">
                         <div class="col-sm-6">
                             Name:--------------------------
                         </div>
@@ -277,4 +290,4 @@
             </div>
         </div>
     </main>
-@endsection
+</body>

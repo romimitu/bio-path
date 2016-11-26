@@ -48,3 +48,5 @@ Route::get('/testreports', 'TestReportController@index' );
 Route::get('/testreports/create/{id}', 'TestReportController@create' );
 Route::post('/testreports/store/{id}', 'TestReportController@store' );
 Route::get('/testreports/view/{id}', 'TestReportController@show' );
+
+Route::get('testreports/printview/{id}', 'TestReportController@reportpreview');

@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Testreport;
 use App\Billing;
@@ -9,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Session;
 use DB;
+use PDF;
 
 class TestReportController extends Controller
 {
@@ -56,5 +56,12 @@ class TestReportController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function reportpreview($id)
+    {
+        $reports = Testreport::find($id);
+        $pdf = PDF::loadView('pdf.testreport',['report' => $reports]);
+        return $pdf->stream('testreport.pdf');
     }
 }

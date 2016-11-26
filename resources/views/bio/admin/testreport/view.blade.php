@@ -29,7 +29,7 @@
                                 <tbody>
                                     <tr>
                                         <td>G.C.C Code</td>
-                                        <td><b>${{$report->gcccode }}</b></td>
+                                        <td><b>{{$report->gcccode }}</b></td>
                                     </tr>
                                     <tr>
                                         <td>G.C.C Slip no</td>
@@ -265,12 +265,9 @@
                             </table>
                         </div>                        
                     </div>
-                    <div class="rorw">
-                        <div class="col-sm-6">
-                            Name:--------------------------
-                        </div>
-                        <div class="col-sm-6" align="right">
-                            Signature:--------------------------
+                    <div class="row">
+                        <div class="col-sm-12">
+                        <a href="{{ url('/testreports/printview/'. $report->id) }}" target="_blank">Print Preview</a>
                         </div>
                     </div>
                 </div>
