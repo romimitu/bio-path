@@ -23,6 +23,7 @@ Route::get('/contact', function () { return view('bio.ui.contact');});
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/getReport', 'PublicController@getreport');
 
 // For Admin Sections recrut agent
 
