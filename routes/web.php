@@ -43,11 +43,15 @@ Route::get('bill/{id}/delete', 'BillingController@destroy');
 
 Route::get('bill/preview/{id}', 'BillingController@preview');
 
-// For Admin Sections Billing System
+// For Admin Sections Test report System
 
 Route::get('/testreports', 'TestReportController@index' );
 Route::get('/testreports/create/{id}', 'TestReportController@create' );
 Route::post('/testreports/store/{id}', 'TestReportController@store' );
 Route::get('/testreports/view/{id}', 'TestReportController@show' );
-
 Route::get('testreports/printview/{id}', 'TestReportController@reportpreview');
+
+// For Admin Sections Income report System
+
+Route::get('/income-reports', 'IncomeReportController@index' );
+Route::get('/income-report', 'IncomeReportController@report' );

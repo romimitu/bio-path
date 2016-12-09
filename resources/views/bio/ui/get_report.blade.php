@@ -27,7 +27,7 @@
           <h2>To get Your Medical Report Please Fill this form fields and submit</h2>
           <hr>
           <div class="row">
-            {!! Form::open(['method'=>"get", 'url' => 'getReport']) !!}
+            {!! Form::open(['method'=>"get", 'url' => '/getReport']) !!}
               <div class="form-group">
                   <label for="concept" class="col-sm-2 control-label">Registration Number: </label>
                   <div class="col-sm-3">
@@ -35,7 +35,7 @@
                   </div>
                   <label for="concept" class="col-sm-2 control-label">Password: </label>
                   <div class="col-sm-3">
-                    {!! Form::text('password',null,['class'=>"form-control", 'type'=>"password", 'placeholder'=>"Enter Password"]) !!}
+                    {!! Form::password('password',['class'=>"form-control", 'type'=>"password", 'placeholder'=>"Enter Password"]) !!}
                   </div>
                   <div class="col-sm-2">
                     {!! Form::submit('submit',['class'=>"btn-system btn-large", 'value'=>"Submit"]) !!}

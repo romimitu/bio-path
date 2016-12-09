@@ -24,11 +24,12 @@
     20 => 'Illuminate\\Validation\\ValidationServiceProvider',
     21 => 'Illuminate\\View\\ViewServiceProvider',
     22 => 'Barryvdh\\DomPDF\\ServiceProvider',
-    23 => 'App\\Providers\\AppServiceProvider',
-    24 => 'App\\Providers\\AuthServiceProvider',
-    25 => 'App\\Providers\\EventServiceProvider',
-    26 => 'App\\Providers\\RouteServiceProvider',
-    27 => 'Collective\\Html\\HtmlServiceProvider',
+    23 => 'Barryvdh\\Debugbar\\ServiceProvider',
+    24 => 'App\\Providers\\AppServiceProvider',
+    25 => 'App\\Providers\\AuthServiceProvider',
+    26 => 'App\\Providers\\EventServiceProvider',
+    27 => 'App\\Providers\\RouteServiceProvider',
+    28 => 'Collective\\Html\\HtmlServiceProvider',
   ),
   'eager' => 
   array (
@@ -43,10 +44,11 @@
     8 => 'Illuminate\\Session\\SessionServiceProvider',
     9 => 'Illuminate\\View\\ViewServiceProvider',
     10 => 'Barryvdh\\DomPDF\\ServiceProvider',
-    11 => 'App\\Providers\\AppServiceProvider',
-    12 => 'App\\Providers\\AuthServiceProvider',
-    13 => 'App\\Providers\\EventServiceProvider',
-    14 => 'App\\Providers\\RouteServiceProvider',
+    11 => 'Barryvdh\\Debugbar\\ServiceProvider',
+    12 => 'App\\Providers\\AppServiceProvider',
+    13 => 'App\\Providers\\AuthServiceProvider',
+    14 => 'App\\Providers\\EventServiceProvider',
+    15 => 'App\\Providers\\RouteServiceProvider',
   ),
   'deferred' => 
   array (

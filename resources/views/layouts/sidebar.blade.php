@@ -29,7 +29,7 @@
                     <li><a href="/testreports"><i class="fa fa-caret-right"></i>All Test Report</a></li>
                 </ul>
             </li>                      
-            <li><a href="#"><span class="sidebar-icon"><i class="fa fa-terminal"></i></span>
+            <li><a href="/income-reports"><span class="sidebar-icon"><i class="fa fa-terminal"></i></span>
                 <span class="sidebar-title">Report</span></a>
             </li>
         </ul>
