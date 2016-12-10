@@ -22,12 +22,12 @@
 
 <body>
     <div class="col-sm-12 pdf-body">
-        <table class="table">
+        <table class="table" style="margin-top: 10px;">
             <tr>
                 <td style="width: 100px;text-align: right;">
                     <img src="images/assets/logo.png" width="90" height="70" class="img-responsive">
                 </td>
-                <td style="text-align: center;width: 460px">
+                <td style="text-align: center;width: 560px;">
                     <h3 style="margin: 0;font-size: 28px;color: #ff1100;line-height: 18px;">Bio-Path Medical Services Ltd.</h3>
                     <p style="margin: 0;color: #000;font-size: 14px;">44, Naya Paltan (1st Floor). (Opposite to Paltan Thana),Dhaka-1000,</p>
                     <p style="margin: 0;color: #000;font-size: 14px;">Telephone: 9359112 or 01712964971</p>
@@ -54,7 +54,7 @@
                     <td>{{$report->name}}</td>
                     <td>{{$report->created_at}}</td>
                     <td>{{$report->recrutoffice}}</td>
-                    <td>{{$report->medicalfee}}</td>
+                    <td>{{$report->medicalfee}} Tk.</td>
                 </tr>
                 @endforeach
                 <tr>
@@ -66,7 +66,7 @@
                            $sum+= $report->medicalfee;
                         }
                         echo $sum;
-                    ?></td>                    
+                    ?> Tk.</td>                    
                 </tr>
             </tbody>
         </table>

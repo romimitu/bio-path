@@ -237,7 +237,7 @@
                                     <tr>
                                         <td colspan="2" rowspan="5" width="50%">
                                         <p>Dear Sir/Madam, <br>
-                                        Mentioned above is the medical report for Mr. Jakir Hussain who is FIT for the above mentioned job according to the GCC criteria.</p>
+                                        Mentioned above is the medical report for {{$report->billing->name}} who is FIT for the above mentioned job according to the GCC criteria.</p>
                                         </td>
                                         <td>1. HIV I & II</td>
                                         <td>{{$report->hiv }}</td>

@@ -25,7 +25,7 @@
 <body>
     <main id="page-content-wrapper" role="main">
         <div class="pdf-body">            
-            <div style="width: 100%;text-align: center;">
+            <div style="width: 100%;text-align: center;margin-top: 3px;">
                 <p><u><b style="border: 2px solid #000;padding: 3px;background: #ccc;color: #000;">RECEIPT FOR MEDICAL REPORT</b></u></p>
             </div>
             <table>
