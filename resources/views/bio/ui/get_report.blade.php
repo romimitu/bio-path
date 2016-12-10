@@ -27,7 +27,7 @@
           <h2>To get Your Medical Report Please Fill this form fields and submit</h2>
           <hr>
           <div class="row">
-            {!! Form::open(['method'=>"get", 'url' => '/getReport']) !!}
+            {!! Form::open(['method'=>"post", 'url' => '/getReport', 'target'=>'_blank']) !!}
               <div class="form-group">
                   <label for="concept" class="col-sm-2 control-label">Registration Number: </label>
                   <div class="col-sm-3">

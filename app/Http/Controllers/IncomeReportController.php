@@ -6,6 +6,7 @@ use App\Billing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use DB;
+use PDF;
 
 class IncomeReportController extends Controller
 {
@@ -15,15 +16,17 @@ class IncomeReportController extends Controller
     }
     public function index()
     {
+        
     	return view('bio.admin.income_reports.index');
     }
 
     public function report()
     {
-        $datafrom = input::get('datefrom');
-        $datato   = input::get('dateto');
-        $report = DB::table('billings')
-                ->whereBetween('created_at', ["$datafrom.' 00:00:01'", "$datato.' 23:59:59"])->get();
-        return view('pdf.report');
+        $datafrom = input::get('datefrom').' 00:00:01';
+        $datato   = input::get('dateto').' 23:59:59';
+        $reports = DB::table('billings')
+                ->whereBetween('created_at', ["$datafrom", "$datato"])->get();
+        $pdf = PDF::loadView('pdf.report',compact('reports'));
+        return $pdf->stream('incomereport.pdf');
     }
 }

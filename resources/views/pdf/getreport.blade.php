@@ -28,6 +28,7 @@
             <div style="width: 100%;text-align: center;">
                 <p><u><b style="border: 2px solid #000;padding: 3px;background: #ccc;color: #000;">RECEIPT FOR MEDICAL REPORT</b></u></p>
             </div>
+            @foreach ($reports as $report)
             <table>
                 <tr>
                     <td style="width: 80px;">
@@ -52,8 +53,8 @@
                                     <td><b>{{$report->gccslipno }}</b></td>
                                 </tr>
                                 <tr>
-                                    <td>Date Examined: {{$report->billing->gcc_slipdate}}</td>
-                                    <td>Report Expiry Date: {{$report->billing->gcc_expirydate}}</td>
+                                    <td>Date Examined: {{$report->gcc_slipdate}}</td>
+                                    <td>Report Expiry Date: {{$report->gcc_expirydate}}</td>
                                 </tr>
                             </tbody>                                
                         </table>
@@ -70,11 +71,11 @@
                                 <tbody>
                                     <tr>
                                         <td>Name</td>
-                                        <td><b>{{$report->billing->name}}</b></td>
+                                        <td><b>{{$report->name}}</b></td>
                                         <td>Date Of Birth</td>
-                                        <td><b>{{$report->billing->birthday}}</b></td>
+                                        <td><b>{{$report->birthday}}</b></td>
                                         <td>Maritial Status</td>
-                                        <td><b>{{$report->billing->maritial_status}}</b></td>
+                                        <td><b>{{$report->maritial_status}}</b></td>
                                     </tr>
                                     <tr>
                                         <td>Height</td>
@@ -82,15 +83,15 @@
                                         <td>Weight</td>
                                         <td><b>{{$report->weight }}</b></td>
                                         <td>Nationality</td>
-                                        <td><b>{{$report->billing->nationality}}</b></td>
+                                        <td><b>{{$report->nationality}}</b></td>
                                     </tr>
                                     <tr>
                                         <td>Place Of Issue</td>
                                         <td><b>Dhaka</b></td>
                                         <td>Travelling To</td>
-                                        <td><b>{{$report->billing->country}}</b></td>
+                                        <td><b>{{$report->country}}</b></td>
                                         <td>Passport No</td>
-                                        <td><b>{{$report->billing->passport}}</b></td>
+                                        <td><b>{{$report->passport}}</b></td>
                                     </tr>
                                     <tr>
                                         <td>Profession</td>
@@ -102,7 +103,7 @@
                                     </tr>
                                     <tr>
                                         <td>Gender</td>
-                                        <td><b>{{$report->billing->gender}}</b></td>
+                                        <td><b>{{$report->gender}}</b></td>
                                         <td>MOFANO</td>
                                         <td><b>{{$report->mofano }}</b></td>
                                         <td></td>
@@ -112,7 +113,7 @@
                             </table>
                         </td>
                         <td>
-                            <img class="img-responsive" src="uploads/{{$report->billing->image}}" width="100" height="80">
+                            <img class="img-responsive" src="uploads/{{$report->image}}" width="100" height="80">
                         </td>
                     </tr>
                 </table>
@@ -252,7 +253,7 @@
                     <tr>
                         <td colspan="2" rowspan="6" width="50%">
                         Dear Sir/Madam, <br>
-                        Mentioned above is the medical report for {{$report->billing->name}} who is FIT for the above mentioned job according to the GCC criteria.
+                        Mentioned above is the medical report for {{$report->name}} who is FIT for the above mentioned job according to the GCC criteria.
                         </td>
                         <td colspan="2"><b>ELISA</b></td>
                     </tr> 
@@ -281,6 +282,7 @@
                     </tr>
                 </tbody>
             </table>
+            @endforeach
             <br>
             <table>
                 <tr>

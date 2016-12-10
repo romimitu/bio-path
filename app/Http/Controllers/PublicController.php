@@ -14,13 +14,13 @@ class PublicController extends Controller
     {
     	$regno		=	Input::get('regno');
     	$password	=	Input::get('password');
-		$report = DB::table('billings')
+		$reports = DB::table('billings')
             ->where('regno', $regno)
             ->where('password', $password)
     		->leftJoin('testreports', 'billings.id', '=', 'testreports.billing_id')
     		->get();
 
-        $pdf = PDF::loadView('pdf.getreport',compact('report'));
+        $pdf = PDF::loadView('pdf.getreport',compact('reports'));
         return $pdf->stream('testreport.pdf');
     }
 }
