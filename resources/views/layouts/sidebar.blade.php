@@ -28,9 +28,16 @@
                 <ul id="submenu-4" class="panel-collapse collapse panel-switch" role="menu">
                     <li><a href="/testreports"><i class="fa fa-caret-right"></i>All Test Report</a></li>
                 </ul>
-            </li>                      
-            <li><a href="/income-reports"><span class="sidebar-icon"><i class="fa fa-terminal"></i></span>
-                <span class="sidebar-title">Report</span></a>
+            </li> 
+            <li>
+                <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-5">
+                    <span class="sidebar-icon"><i class="fa fa-terminal"></i></span>
+                    <span class="sidebar-title">Report</span>                
+                    <b class="caret"></b>
+                </a>
+                <ul id="submenu-5" class="panel-collapse collapse panel-switch" role="menu">
+                    <li><a href="/income-reports"><i class="fa fa-caret-right"></i>Income Report</a></li>
+                </ul>
             </li>
         </ul>
     </aside>            
