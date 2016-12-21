@@ -34,7 +34,7 @@
                     <p style="margin:5px 0px;"><u><b style="border: 2px solid #000;padding: 3px;background: #ccc;color: #000;">RECEIPT FOR MEDICAL REPORT</b></u></p>
                 </td>
                 <td style="width: 120px;">
-                    <img src="uploads/{{$image}}" alt="{{$image}}" width="120" height="110" class="img-responsive">
+                    <img src="{{$image}}" alt="{{$image}}" width="120" height="110" class="img-responsive">
                 </td>
             </tr>
         </table>  
@@ -165,7 +165,7 @@
                     <p style="margin:5px 0px;"><u><b style="border: 2px solid #000;padding: 3px;background: #ccc;color: #000;">RECEIPT FOR MEDICAL REPORT</b></u></p>
                 </td>
                 <td style="width: 120px;">
-                    <img src="uploads/{{$image}}" alt="{{$image}}" width="120" height="110" class="img-responsive">
+                    <img src="{{$image}}" alt="{{$image}}" width="120" height="110" class="img-responsive">
                 </td>
             </tr>
         </table>  

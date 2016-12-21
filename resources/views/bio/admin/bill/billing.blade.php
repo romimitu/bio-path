@@ -9,7 +9,7 @@
     <main id="page-content-wrapper" role="main">
         <div class="col-sm-12">
             <div class="panel panel-default">
-                {!! Form::open(['url' => 'bill/store', 'target'=>'_blank', 'method'=>'post', 'files'=>true]) !!}
+                {!! Form::open(['url' => 'bill/store', 'target'=>'_blank', 'method'=>'post',  'role'=>"form", 'enctype'=>"multipart/form-data"]) !!}
                   <div class="panel panel-info">
                     <div class="panel-heading">
                         <div class="panel-title">Reciept for Medical Test</div>

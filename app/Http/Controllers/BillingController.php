@@ -35,15 +35,7 @@ class BillingController extends Controller
     {
         $data = $request->except('image');
  
-        if($request->hasFile('image')) {
-            $file = Input::file('image');
-            //getting timestamp
-            $timestamp = str_replace([' ', ':'], '-', Carbon::now()->toDateTimeString());
-           
-            $name = $timestamp. '-' .$file->getClientOriginalName();            
-            $data['image'] = $name;
-            $file->move(public_path().'/uploads/', $name);
-        }
+        $data['image']=uploadFile('image',$request,'uploads/');
         Billing::create($data);
  
         $pdf = \PDF::loadView('pdf.invoice', $data);

@@ -107,45 +107,47 @@
                         {!! Form::text('salmonella', 'NAD', ['class'=> 'form-control col-sm-2']) !!}
                         {!! Form::label('Cholera', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('cholera', 'NAD', ['class'=> 'form-control col-sm-2']) !!}
-                        {!! Form::label('Blood Group', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('bloodgroup', null, ['class'=> 'form-control col-sm-2']) !!}
-                      </div>             
-                      <div class="form-group">
-                        {!! Form::label('Haemoglobin', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('haemoglobin', null, ['class'=> 'form-control col-sm-2']) !!}
-                        {!! Form::label('Thick Film For', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('thickfilmfor', null, ['class'=> 'form-control col-sm-2']) !!}
-                        {!! Form::label('Malaria', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('malaria', null, ['class'=> 'form-control col-sm-2']) !!}
-                      </div>           
-                      <div class="form-group">
-                        {!! Form::label('Micro Filaria', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('microfilaria', null, ['class'=> 'form-control col-sm-2']) !!}
                         {!! Form::label('R.B.S', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('rbs', null, ['class'=> 'form-control col-sm-2']) !!}
-                        {!! Form::label('L.F.T.S', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('lfts', null, ['class'=> 'form-control col-sm-2']) !!}
+                      </div>             
+                      <div class="form-group">
+                        {!! Form::label('SGPT', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('sgpt', null, ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('SGOT', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('sgot', null, ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('SB', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('sb', null, ['class'=> 'form-control col-sm-2']) !!}
                       </div>           
                       <div class="form-group">
-                        {!! Form::label('Creatinine', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('creatinine', null, ['class'=> 'form-control col-sm-2']) !!}
-                        {!! Form::label('HIV I & II', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('hiv', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('Crealine', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('crealine', null, ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('Malaria', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('malaria', null, ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('Micro Filaria', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('microfilaria', null, ['class'=> 'form-control col-sm-2']) !!}
+                      </div>           
+                      <div class="form-group">
                         {!! Form::label('HbsAg', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('hbsag', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
-                      </div>        
-                      <div class="form-group">
-                        {!! Form::label('Anti HCV', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('antihcv', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
                         {!! Form::label('VDRL', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('vdrl', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
                         {!! Form::label('TPHA', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('tpha', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
+                      </div>        
+                      <div class="form-group">
+                        {!! Form::label('Anti HCV', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('antihcv', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('HIV I & II', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('hiv', 'Negative', ['class'=> 'form-control col-sm-2']) !!}
+                        {!! Form::label('Blood Group', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('bloodgroup', null, ['class'=> 'form-control col-sm-2']) !!} 
                       </div> 
-                      <div class="form-group">                      
+                      <div class="form-group">
                         {!! Form::label('Remarks', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('remarks', null, ['class'=> 'form-control col-sm-10']) !!}
-                      </div>                      
+                        {!! Form::text('remarks', null, ['class'=> 'form-control col-sm-6']) !!}
+                        {!! Form::label('Haemoglobin', null, ['class'=> 'col-sm-2']) !!}
+                        {!! Form::text('haemoglobin', null, ['class'=> 'form-control col-sm-2']) !!}                       
+                      </div>                    
                       {!! Form::submit('Submit', ['class'=> 'btn btn-primary']) !!}
                     {!! Form::close() !!}
             </div>

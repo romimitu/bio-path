@@ -93,12 +93,12 @@
                             </table>
                         </div>
                         <div class="col-sm-2">
-                            <img class="img-responsive" src="{{ asset('uploads/'.$report->billing->image)}}"">
+                            <img class="img-responsive" src="{{ asset($report->billing->image)}}">
                         </div>
                     </div>                    
                     <div class="col-sm-12 report-para">
                         <p>History of any significant past illness including: 1) Allergy: NAD, 2) Others: NAD, 3) Psychiatric and neurological disorders(Epilepsy, depression, schizophrenia): NAD</p>
-                        <p>'I hereby permit the: Bio-Path Medical Services Ltd and undersigned physician to fumish such information the company may need pertaining to my health status and other pertinent and medical findings and do hereby release them from any and all legal responsibility by doing so. I also certify that my medical history contained above is true and any false statement will disqualify me from my employemnet, benifits and claims.</p>
+                        <p>I hereby permit the: Bio-Path Medical Services Ltd and undersigned physician to fumish such information the company may need pertaining to my health status and other pertinent and medical findings and do hereby release them from any and all legal responsibility by doing so. I also certify that my medical history contained above is true and any false statement will disqualify me from my employemnet, benifits and claims.</p>
                     </div>                              
                     <div class="row single-report-body">
                         <div class="col-sm-12 test-list">
@@ -180,87 +180,87 @@
                                     <tr>
                                         <td>Varicose Veins</td>
                                         <td>{{$report->varicoseveins }}</td>
-                                        <td colspan="2"><b>Blood</b></td>
+                                        <td colspan="2"><b>Biochemistry</b></td>
                                     </tr>
                                     <tr>
                                         <td>Extremities</td>
                                         <td>{{$report->extremities }}</td>
-                                        <td>Blood Group</td>
-                                        <td>{{$report->bloodgroup }}</td>
+                                        <td>1. R.B.S</td>
+                                        <td>{{$report->rbs }}</td>
                                     </tr>                               
                                     <tr>
                                         <td>Deformities</td>
                                         <td>{{$report->deformities }}</td>
-                                        <td>Heamoglobin</td>
-                                        <td>{{$report->haemoglobin }}</td>
+                                        <td>2. SGPT</td>
+                                        <td>{{$report->sgpt }}</td>
                                     </tr>
                                     <tr>
                                         <td>Skin</td>
                                         <td>{{$report->skin }}</td>
-                                        <td>Thick Film For</td>
-                                        <td>{{$report->thickfilmfor }}</td>
+                                        <td>3. SGOT</td>
+                                        <td>{{$report->sgot }}</td>
                                     </tr>                               
                                     <tr>
                                         <td>Venereal Diseases</td>
                                         <td>{{$report->venerealdiseases }}</td>
-                                        <td>1. Malaria</td>
-                                        <td>{{$report->malaria }}</td>
+                                        <td>4. SB</td>
+                                        <td>{{$report->sb }}</td>
                                     </tr>
                                     <tr>
                                         <td>C.N.S</td>
                                         <td>{{$report->cns }}</td>
-                                        <td>Micro Filaria</td>
+                                        <td>5. Crealine</td>
+                                        <td>{{$report->crealine }}</td>
+                                    </tr>                                
+        		                    <tr>
+        		                        <td>Psychiatry</td>
+        		                        <td>{{$report->psychiatry }}</td>
+                                        <td>6. Malaria</td>
+                                        <td>{{$report->malaria }}</td>
+        		                    </tr>                            
+        		                    <tr>
+        		                        <td colspan="2" rowspan="2">Remarks : {{$report->remarks }}</td>
+                                        <td>7. Micro Filaria</td>
                                         <td>{{$report->microfilaria }}</td>
-                                    </tr>                               
-                                    <tr>
-                                        <td>Psychiatry</td>
-                                        <td>{{$report->psychiatry }}</td>
-                                        <td colspan="2"><b>Elisa</b></td>
-                                    </tr>                            
-                                    <tr>
-                                        <td rowspan="3">Remarks</td>
-                                        <td>{{$report->remarks }}</td>
-                                        <td colspan="2"><b>Serolory</b></td>
-                                    </tr>
-                                    <tr>
-                                        <td>1. R.B.S</td>
-                                        <td>{{$report->rbs }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>L.F.T.S</td>
-                                        <td>{{$report->lfts }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Creatinine</td>
-                                        <td>{{$report->creatinine }}</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2" rowspan="5" width="50%">
-                                        <p>Dear Sir/Madam, <br>
-                                        Mentioned above is the medical report for {{$report->billing->name}} who is FIT for the above mentioned job according to the GCC criteria.</p>
-                                        </td>
-                                        <td>1. HIV I & II</td>
-                                        <td>{{$report->hiv }}</td>
-                                    </tr>                               
-                                    <tr>
-                                        <td>2. HBsAg</td>
+        		                    </tr>
+        		                    <tr>
+        		                        <td colspan="2"><b>Serology</b></td>
+        		                    </tr>
+        		                    <tr>
+        		                        <td colspan="2" rowspan="7" width="50%">
+        		                        Dear Sir/Madam, <br>
+        		                        Mentioned above is the medical report for {{$report->billing->name}} who is FIT for the above mentioned job according to the GCC criteria.
+        		                        </td>
+                                        <td>1. HBsAg</td>
                                         <td>{{$report->hbsag }}</td>
-                                    </tr>
+        		                    </tr>                              
                                     <tr>
-                                        <td>3. Anti HCV</td>
-                                        <td>{{$report->antihcv }}</td>
-                                    </tr>                               
-                                    <tr>
-                                        <td>VDRL</td>
+                                        <td>2. VDRL</td>
                                         <td> {{$report->vdrl }}</td>
-                                    </tr>                            
+                                    </tr>                           
                                     <tr>
-                                        <td>TPHA</td>
+                                        <td>3. TPHA</td>
                                         <td>{{$report->tpha }}</td>
-                                    </tr>                         
+                                    </tr> 
                                     <tr>
-                                        <td colspan="4">Cheif Physician</td>
-                                    </tr>
+                                        <td>4. Anti HCV</td>
+                                        <td>{{$report->antihcv }}</td>
+                                    </tr> 
+        		                    <tr>
+        		                        <td>5. HIV I & II</td>
+        		                        <td>{{$report->hiv }}</td>
+        		                    </tr>                              
+        		                    <tr>
+                                        <td>Blood Group</td>
+                                        <td>{{$report->bloodgroup }}</td>
+        		                    </tr>  
+                                    <tr>                                        
+                                        <td>Heamoglobin</td>
+                                        <td>{{$report->haemoglobin }}</td>
+                                    </tr>                        
+        		                    <tr>
+        		                        <td colspan="4">Cheif Physician</td>
+        		                    </tr>
                                 </tbody>
                             </table>
                         </div>                        

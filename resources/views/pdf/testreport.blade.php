@@ -7,14 +7,12 @@
     <link href="/css/style.css" rel="stylesheet">
     <title>Bio-Path Medical Services Ltd</title>
     <style>
-        body{margin: 0px;padding: 0px;}
-        h3{margin: 5px;}
-        p {margin: 0 0 5px;font-size: 13px;}
-        .pdf-body tr td {font-size: 10px;}
-        .report-para {margin: 5px 2px;}
-        .report-para p {margin: 0 0 5px;font-size: 11px;}
-        .table-bordered td{font-size: 16px; padding: 2px;line-height: 1;color: #000;border: 1px solid #ddd;}
-        .pdf-body{border: 5px double #000;margin-bottom: 20px;}
+        body,hr{margin: 0px;padding: 0px;}
+        h3{margin: 2px;padding: 0px;}
+        td, p {margin: 0px;font-size: 12px;}
+        .table-bordered td{font-size: 12px; padding: 2px;line-height: 1;color: #000; border: 1px solid #ddd;vertical-align: middle;}
+        .report-para td {margin: 0 0 5px;font-size: 10px;}
+        .pdf-body{border: 3px double #000;}
         @font-face{
             font-family: 'Oswald', 'Ubuntu', 'Titillium Web';
             src:url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Titillium+Web');
@@ -23,10 +21,10 @@
 </head>
 
 <body>
-    <main id="page-content-wrapper" role="main">
+    <main class="page-content-wrapper" role="main">
         <div class="pdf-body">            
-            <div style="width: 100%;text-align: center;margin-top: 3px;">
-                <p><u><b style="border: 2px solid #000;padding: 3px;background: #ccc;color: #000;">RECEIPT FOR MEDICAL REPORT</b></u></p>
+            <div style="width: 100%;text-align: center;margin-top: 1px;">
+                <p><u><b style="border: 2px solid #000;padding: 1px;background: #ccc;color: #000;">MEDICAL REPORT</b></u></p>
             </div>
             <table>
                 <tr>
@@ -34,8 +32,8 @@
                         <img src="images/assets/logo.png" width="90" height="70" class="img-responsive">
                     </td>
                     <td style="width: 350px;">
-                        <h3 style="margin: 0;font-size: 25px;color: #ff1100;line-height: 18px;">Bio-Path Medical Services Ltd.</h3>
-                        <p>44, Naya Paltan (1st Floor). (Opposite to Paltan Thana),<br>Dhaka-1000,</p>
+                        <h3 style="margin: 0;font-size: 22px;color: #ff1100;line-height: 15px;">Bio-Path Medical Services Ltd.</h3>
+                        <p>44, Naya Paltan (1st Floor). (Opposite to Paltan Thana), Dhaka-1000,</p>
                         <p>Telephone: 9359112 or 01712964971</p>
                         <a href="http://biopathmedical.com">www.biopathmedical.com</a>
                     </td>
@@ -44,12 +42,8 @@
                         <table class="table table-bordered">
                             <tbody>
                                 <tr>
-                                    <td>G.C.C Code</td>
-                                    <td><b>{{$report->gcccode }}</b></td>
-                                </tr>
-                                <tr>
-                                    <td>G.C.C Slip no</td>
-                                    <td><b>{{$report->gccslipno }}</b></td>
+                                    <td>G.C.C Code: <b>{{$report->gcccode }}</b></td>
+                                    <td>G.C.C Slip no: <b>{{$report->gccslipno }}</b></td>
                                 </tr>
                                 <tr>
                                     <td>Date Examined: {{$report->billing->gcc_slipdate}}</td>
@@ -112,26 +106,26 @@
                             </table>
                         </td>
                         <td>
-                            <img class="img-responsive" src="uploads/{{$report->billing->image}}" width="100" height="80">
+                            <img class="img-responsive" src="{{$report->billing->image}}" width="100" height="80">
                         </td>
                     </tr>
                 </table>
             </div>                    
             <table class="report-para">
                 <tr><td>History of any significant past illness including: 1) Allergy: NAD, 2) Others: NAD, 3) Psychiatric and neurological disorders (Epilepsy, depression, schizophrenia): NAD</td></tr>
-                <tr><td>'I hereby permit the: Bio-Path Medical Services Ltd and undersigned physician to fumish such information the company may need pertaining to my health status and other pertinent and medical findings and do hereby release them from any and all legal responsibility by doing so. I also certify that my medical history contained above is true and any false statement will disqualify me from my employemnet, benifits and claims.</td></tr>
+                <tr><td>I hereby permit the: Bio-Path Medical Services Ltd and undersigned physician to fumish such information the company may need pertaining to my health status and other pertinent and medical findings and do hereby release them from any and all legal responsibility by doing so. I also certify that my medical history contained above is true and any false statement will disqualify me from my employemnet, benifits and claims.</td></tr>
             </table>
-            <table class="test-list table-bordered">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <td colspan="2" align="center"><b>MEDICAL EXAMINATION</b></td>
-                        <td colspan="2" align="center"><b>LABORATORY INVESTIGATION</b></td>
+                        <td colspan="2">MEDICAL EXAMINATION</td>
+                        <td colspan="2">LABORATORY INVESTIGATION</td>
                     </tr>                                 
                     <tr>
-                        <td><b>Type of EXAMINATION</b></td>
-                        <td><b>Result</b></td>
-                        <td><b>Type of LAB INVESTIGATION</b></td>
-                        <td><b>Result</b></td>
+                        <td>Type of EXAMINATION</td>
+                        <td>Result</td>
+                        <td>Type of LAB INVESTIGATION</td>
+                        <td>Result</td>
                     </tr> 
                 </thead>
                 <tbody>
@@ -199,83 +193,84 @@
                     <tr>
                         <td>Varicose Veins</td>
                         <td>{{$report->varicoseveins }}</td>
-                        <td colspan="2"><b>Blood</b></td>
+                        <td colspan="2"><b>Biochemistry</b></td>
                     </tr>
                     <tr>
                         <td>Extremities</td>
                         <td>{{$report->extremities }}</td>
-                        <td>Blood Group</td>
-                        <td>{{$report->bloodgroup }}</td>
+                        <td>1. R.B.S</td>
+                        <td>{{$report->rbs }}</td>
                     </tr>                               
                     <tr>
                         <td>Deformities</td>
                         <td>{{$report->deformities }}</td>
-                        <td>Heamoglobin</td>
-                        <td>{{$report->haemoglobin }}</td>
+                        <td>2. SGPT</td>
+                        <td>{{$report->sgpt }}</td>
                     </tr>
                     <tr>
                         <td>Skin</td>
                         <td>{{$report->skin }}</td>
-                        <td>Thick Film For</td>
-                        <td>{{$report->thickfilmfor }}</td>
+                        <td>3. SGOT</td>
+                        <td>{{$report->sgot }}</td>
                     </tr>                               
                     <tr>
                         <td>Venereal Diseases</td>
                         <td>{{$report->venerealdiseases }}</td>
-                        <td>1. Malaria</td>
-                        <td>{{$report->malaria }}</td>
+                        <td>4. SB</td>
+                        <td>{{$report->sb }}</td>
                     </tr>
                     <tr>
                         <td>C.N.S</td>
                         <td>{{$report->cns }}</td>
-                        <td>Micro Filaria</td>
-                        <td>{{$report->microfilaria }}</td>
-                    </tr>                               
+                        <td>5. Crealine</td>
+                        <td>{{$report->crealine }}</td>
+                    </tr>                                
                     <tr>
                         <td>Psychiatry</td>
                         <td>{{$report->psychiatry }}</td>
-                        <td colspan="2"><b>Serolory</b></td>
+                        <td>6. Malaria</td>
+                        <td>{{$report->malaria }}</td>
                     </tr>                            
                     <tr>
-                        <td colspan="2" rowspan="3">Remarks : {{$report->remarks }}</td>
-                        <td>1. R.B.S</td>
-                        <td>{{$report->rbs }}</td>
+                        <td colspan="2" rowspan="2">Remarks : {{$report->remarks }}</td>
+                        <td>7. Micro Filaria</td>
+                        <td>{{$report->microfilaria }}</td>
                     </tr>
                     <tr>
-                        <td>L.F.T.S</td>
-                        <td>{{$report->lfts }}</td>
+                        <td colspan="2"><b>Serology</b></td>
                     </tr>
                     <tr>
-                        <td>Creatinine</td>
-                        <td>{{$report->creatinine }}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" rowspan="6" width="50%">
+                        <td colspan="2" rowspan="7" width="50%">
                         Dear Sir/Madam, <br>
                         Mentioned above is the medical report for {{$report->billing->name}} who is FIT for the above mentioned job according to the GCC criteria.
                         </td>
-                        <td colspan="2"><b>ELISA</b></td>
+                        <td>1. HBsAg</td>
+                        <td>{{$report->hbsag }}</td>
+                    </tr>                              
+                    <tr>
+                        <td>2. VDRL</td>
+                        <td> {{$report->vdrl }}</td>
+                    </tr>                           
+                    <tr>
+                        <td>3. TPHA</td>
+                        <td>{{$report->tpha }}</td>
                     </tr> 
                     <tr>
-                        <td>1. HIV I & II</td>
+                        <td>4. Anti HCV</td>
+                        <td>{{$report->antihcv }}</td>
+                    </tr> 
+                    <tr>
+                        <td>5. HIV I & II</td>
                         <td>{{$report->hiv }}</td>
                     </tr>                              
                     <tr>
-                        <td>2. HBsAg</td>
-                        <td>{{$report->hbsag }}</td>
-                    </tr>
-                    <tr>
-                        <td>3. Anti HCV</td>
-                        <td>{{$report->antihcv }}</td>
-                    </tr>                               
-                    <tr>
-                        <td>VDRL</td>
-                        <td> {{$report->vdrl }}</td>
-                    </tr>                            
-                    <tr>
-                        <td>TPHA</td>
-                        <td>{{$report->tpha }}</td>
-                    </tr>                         
+                        <td>Blood Group</td>
+                        <td>{{$report->bloodgroup }}</td>
+                    </tr>  
+                    <tr>                                        
+                        <td>Heamoglobin</td>
+                        <td>{{$report->haemoglobin }}</td>
+                    </tr>                        
                     <tr>
                         <td colspan="4">Cheif Physician</td>
                     </tr>

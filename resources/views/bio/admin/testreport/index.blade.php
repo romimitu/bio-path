@@ -46,8 +46,7 @@
                                 <td>{{ $report->visano }}</td>
                                 <td>{{ $report->mofano }}</td>
                                 <td>
-                                    <a href="{{ url('/testreports/view/'. $report->id) }}" >View Report</a> |
-                                    <a class="delete" href="{{ url('/testreports/'. $report->id.'/delete') }}">Delete</a>
+                                    <a href="{{ url('/testreports/view/'. $report->id) }}" >View Report</a>
                                 </td>
                             </tr>
                         @endforeach

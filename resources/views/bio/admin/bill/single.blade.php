@@ -13,7 +13,7 @@
                 <div class="panel-body single-bill">                    
                     <div class="row single-bill-header">
                         <div class="col-sm-2" style="text-align: right;">
-                            <img class="img-responsive" src="{{ asset('images/assets/logo.png')}}"">
+                            <img class="img-responsive" src="{{ asset('images/assets/logo.png')}}">
                         </div>
                         <div class="col-sm-8" align="center">
                             <h3>Bio-Path Medical Services Ltd.</h3>
@@ -23,7 +23,7 @@
                             <div class="Page-title"><b>RECEIPT FO MEDICAL TEST</b></div>
                         </div>
                         <div class="col-sm-2">
-                            <img class="img-responsive" src="{{ asset('uploads/'.$bill->image)}}" alt="{{ $bill->name }}">
+                            <img class="img-responsive" src="{{asset('../'.$bill->image)}}" alt="{{ $bill->name }}">
                         </div>
                     </div>
                     <hr/>
