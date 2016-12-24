@@ -13,27 +13,17 @@
                 <div class="panel-body">                    
                     <div class="row single-bill-header">                     
                         <div class="Page-title" style="text-align: center;"><b>MEDICAL TEST REPORT</b></div>
-                        <div class="col-sm-2" style="text-align: right;">
-                            <img class="img-responsive" src="{{ asset('images/assets/logo.png')}}"">
-                        </div>
-                        <div class="col-sm-5">
-                            <h3>Bio-Path Medical Services Ltd.</h3>
-                            <p>44, Naya Paltan (1st Floor). (Opposite to Paltan Thana),<br>Dhaka-1000,</p>
-                            <p>Telephone: 9359112 or 01712964971</p>
-                            <a href="http://biopathmedical.com">www.biopathmedical.com</a>
+                        <div class="col-sm-8" style="text-align: right;">
+                            <img class="img-responsive" src="{{ asset('images/assets/banner.png')}}">
                         </div>
 
-                        <div class="col-sm-5">
-                            <p>EXECUTIVE BORAD OF THE HEALTH MINISTERS COUNCIL FOR GCC STATES</p>
+                        <div class="col-sm-4">
+                            <img class="img-responsive" src="{{ asset('images/assets/gcc-logo.png')}}">                            
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
-                                        <td>G.C.C Code</td>
-                                        <td><b>{{$report->gcccode }}</b></td>
-                                    </tr>
-                                    <tr>
-                                        <td>G.C.C Slip no</td>
-                                        <td><b>{{$report->gccslipno }}</b></td>
+                                        <td>G.C.C Code: <b>{{$report->gcccode }}</b></td>
+                                        <td>G.C.C Slip no: <b>{{$report->gccslipno }}</b></td>
                                     </tr>
                                     <tr>
                                         <td>Date Examined: <br> {{$report->billing->gcc_slipdate}}</td>

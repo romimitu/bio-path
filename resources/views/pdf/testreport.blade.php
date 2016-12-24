@@ -3,20 +3,20 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" media="all">
     <link href="/css/style.css" rel="stylesheet">
     <title>Bio-Path Medical Services Ltd</title>
     <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu|Titillium+Web');
         body,hr{margin: 0px;padding: 0px;}
-        h3{margin: 2px;padding: 0px;}
-        td, p {margin: 0px;font-size: 12px;}
-        .table-bordered td{font-size: 12px; padding: 2px;line-height: 1;color: #000; border: 1px solid #ddd;vertical-align: middle;}
+        td{font-family: 'Ubuntu', sans-serif;}
+        p,a,li,span {font-family: 'Titillium Web', sans-serif;}
+        td, p {margin: 0px;font-size: 11px;}
+        .table-bordered{border: 1px solid #ddd;}
+        table tr td:last-child{border-bottom: 0px solid #ddd;}
+        .table-bordered td{font-size: 13px;padding: 2px; line-height: 0.8;color: #000; border-bottom: 1px solid #ddd;vertical-align: middle;}
         .report-para td {margin: 0 0 5px;font-size: 10px;}
         .pdf-body{border: 3px double #000;}
-        @font-face{
-            font-family: 'Oswald', 'Ubuntu', 'Titillium Web';
-            src:url('https://fonts.googleapis.com/css?family=Oswald|Ubuntu|Titillium+Web');
-        }
     </style>
 </head>
 
@@ -28,17 +28,11 @@
             </div>
             <table>
                 <tr>
-                    <td style="width: 80px;">
-                        <img src="images/assets/logo.png" width="90" height="70" class="img-responsive">
-                    </td>
-                    <td style="width: 350px;">
-                        <h3 style="margin: 0;font-size: 22px;color: #ff1100;line-height: 15px;">Bio-Path Medical Services Ltd.</h3>
-                        <p>44, Naya Paltan (1st Floor). (Opposite to Paltan Thana), Dhaka-1000,</p>
-                        <p>Telephone: 9359112 or 01712964971</p>
-                        <a href="http://biopathmedical.com">www.biopathmedical.com</a>
+                    <td style="width: 450px;">
+                        <img src="images/assets/banner.png" width="400" height="70" class="img-responsive">
                     </td>
                     <td>
-                        <p>EXECUTIVE BORAD OF THE HEALTH MINISTERS COUNCIL FOR GCC STATES</p>
+                        <img src="images/assets/gcc-logo.png" width="160" height="25" class="img-responsive">
                         <table class="table table-bordered">
                             <tbody>
                                 <tr>
@@ -116,11 +110,7 @@
                 <tr><td>I hereby permit the: Bio-Path Medical Services Ltd and undersigned physician to fumish such information the company may need pertaining to my health status and other pertinent and medical findings and do hereby release them from any and all legal responsibility by doing so. I also certify that my medical history contained above is true and any false statement will disqualify me from my employemnet, benifits and claims.</td></tr>
             </table>
             <table class="table table-bordered">
-                <thead>
-                    <tr>
-                        <td colspan="2">MEDICAL EXAMINATION</td>
-                        <td colspan="2">LABORATORY INVESTIGATION</td>
-                    </tr>                                 
+                <thead style="text-align: center;font-weight: 700;">                                
                     <tr>
                         <td>Type of EXAMINATION</td>
                         <td>Result</td>
@@ -264,11 +254,11 @@
                         <td>{{$report->hiv }}</td>
                     </tr>                              
                     <tr>
-                        <td>Blood Group</td>
+                        <td><b>Blood Group</b></td>
                         <td>{{$report->bloodgroup }}</td>
                     </tr>  
                     <tr>                                        
-                        <td>Heamoglobin</td>
+                        <td><b>Heamoglobin</b></td>
                         <td>{{$report->haemoglobin }}</td>
                     </tr>                        
                     <tr>
