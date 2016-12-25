@@ -13,8 +13,7 @@
         p,a,li,span {font-family: 'Titillium Web', sans-serif;}
         td, p {margin: 0px;font-size: 11px;}
         .table-bordered{border: 1px solid #ddd;}
-        table tr td:last-child{border-bottom: 0px solid #ddd;}
-        .table-bordered td{font-size: 13px;padding: 2px; line-height: 0.8;color: #000; border-bottom: 1px solid #ddd;vertical-align: middle;}
+        .table-bordered tr td{font-size: 0.8em;padding: 1px; line-height: 1;color: #000; border-bottom: 1px solid #ddd;vertical-align: middle;}
         .report-para td {margin: 0 0 5px;font-size: 10px;}
         .pdf-body{border: 3px double #000;}
     </style>
@@ -28,7 +27,7 @@
             </div>
             <table>
                 <tr>
-                    <td style="width: 450px;">
+                    <td style="width: 420px;">
                         <img src="images/assets/banner.png" width="400" height="70" class="img-responsive">
                     </td>
                     <td>

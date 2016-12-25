@@ -89,12 +89,14 @@
     </div>
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+    <script src="/js/jquery-2.1.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
     <script>
         $(function() {
             $( ".datepicker" ).datepicker({
-                dateFormat: "dd-mm-yy"
+                dateFormat: "yy-mm-dd",
+                changeMonth: true,
+                changeYear: true
             });
         });
     </script>
