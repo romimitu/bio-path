@@ -41,6 +41,8 @@ Route::post('/bill/store', 'BillingController@store' );
 Route::get('/bill/{id}', 'BillingController@show' );
 Route::get('bill/{id}/delete', 'BillingController@destroy');
 
+Route::get('search/agent', 'BillingController@autocomplete');
+
 Route::get('bill/preview/{id}', 'BillingController@preview');
 
 // For Admin Sections Test report System

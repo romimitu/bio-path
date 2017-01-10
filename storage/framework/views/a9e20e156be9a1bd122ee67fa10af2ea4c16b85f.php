@@ -88,8 +88,7 @@
                 <div class="form-group">
                     <?php echo Form::label('Activity', null, ['class'=> 'col-sm-3']); ?>
 
-                    <?php echo Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'],
-                    'Active', ['class'=> 'form-control col-sm-9']); ?>
+                    <?php echo Form::select('activity', ['Active' => 'Active', 'Inactive' => 'Inactive'], 'Active', ['class'=> 'form-control col-sm-9']); ?>
 
                 </div>
                 <?php echo Form::submit('Submit', ['class'=> 'btn btn-primary']); ?>

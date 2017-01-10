@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Agent;
 use App\Billing;
 use Illuminate\Support\Facades\Input;
 use Carbon\Carbon;
@@ -76,6 +77,19 @@ class BillingController extends Controller
         $data = Billing::find($id);
         $pdf = \PDF::loadView('pdf.invoice', $data);
         return $pdf->stream('invoice.pdf');
+    }
+
+    public function autoComplete(Request $request) {
+        $query = $request->get('term','');        
+        $agents=Agent::where('name','LIKE','%'.$query.'%')->get();        
+        $data=array();
+        foreach ($agents as $agent) {
+            $data[]=array('value'=>$agent->name, 'label'=>$agent->name.' --- '.$agent->mobile, 'auto'=>[$agent->name,$agent->mobile]);
+        }
+        if(count($data))
+            return $data;
+        else
+            return ['value'=>'Not Found'];
     }
 
 }

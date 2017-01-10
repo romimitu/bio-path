@@ -87,7 +87,7 @@
                       <div class="form-group">
                         <?php echo Form::label('Recruit Agent', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('recrutoffice', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+                        <?php echo Form::text('recrutoffice', null, ['id'=>'recrutoffice', 'class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
                         <?php echo Form::label('GCC Expiry Date', null, ['class'=> 'col-sm-2']); ?>
 
@@ -97,7 +97,7 @@
                       <div class="form-group">
                         <?php echo Form::label('Recruit Contact', null, ['class'=> 'col-sm-2']); ?>
 
-                        <?php echo Form::text('recrutingcontact', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
+                        <?php echo Form::text('recrutingcontact', null, ['id'=>'recrutingcontact', 'class'=> 'form-control col-sm-4', 'required' => 'required']); ?>
 
                         <?php echo Form::label('Report Delivery Date', null, ['class'=> 'col-sm-2']); ?>
 
@@ -137,6 +137,20 @@
             </div>
         </div>
     </main>
+    <script> 
+        (function( $ ) {     
+            $(document).ready(function() {
+                $( "#recrutoffice" ).autocomplete({
+                    source: "<?php echo e(url('search/agent')); ?>",
+                    minLength: 0,
+                    select: function(event, ui) {
+                        $('#recrutoffice').val(ui.item.auto[0]);
+                        $('#recrutingcontact').val(ui.item.auto[1]);
+                    }
+                });
+            });  
+        })( jQuery );
+    </script>
 <?php $__env->stopSection(); ?>
 
 

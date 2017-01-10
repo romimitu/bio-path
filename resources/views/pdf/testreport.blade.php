@@ -11,9 +11,9 @@
         body,hr{margin: 0px;padding: 0px;}
         td{font-family: 'Ubuntu', sans-serif;}
         p,a,li,span {font-family: 'Titillium Web', sans-serif;}
-        td, p {margin: 0px;font-size: 11px;}
+        p, .table-govt tr td{margin: 0px;font-size: 0.7em;}
         .table-bordered{border: 1px solid #ddd;}
-        .table-bordered tr td{font-size: 0.8em;padding: 1px; line-height: 1;color: #000; border-bottom: 1px solid #ddd;vertical-align: middle;}
+        .table-bordered tr td{font-size: 0.8em;padding: 2px; line-height: 0.8;color: #000; border-bottom: 1px solid #ddd;vertical-align: middle;}
         .report-para td {margin: 0 0 5px;font-size: 10px;}
         .pdf-body{border: 3px double #000;}
     </style>
@@ -23,7 +23,7 @@
     <main class="page-content-wrapper" role="main">
         <div class="pdf-body">            
             <div style="width: 100%;text-align: center;margin-top: 1px;">
-                <p><u><b style="border: 2px solid #000;padding: 1px;background: #ccc;color: #000;">MEDICAL REPORT</b></u></p>
+                <p><b style="border: 2px solid #000;padding: 1px;background: #ccc;color: #000;">MEDICAL REPORT</b></p>
             </div>
             <table>
                 <tr>
@@ -32,7 +32,7 @@
                     </td>
                     <td>
                         <img src="images/assets/gcc-logo.png" width="160" height="25" class="img-responsive">
-                        <table class="table table-bordered">
+                        <table class="table table-govt">
                             <tbody>
                                 <tr>
                                     <td>G.C.C Code: <b>{{$report->gcccode }}</b></td>
@@ -40,7 +40,7 @@
                                 </tr>
                                 <tr>
                                     <td>Date Examined: {{$report->billing->gcc_slipdate}}</td>
-                                    <td>Report Expiry Date: {{$report->billing->gcc_expirydate}}</td>
+                                    <td>Report Expired: {{$report->billing->gcc_expirydate}}</td>
                                 </tr>
                             </tbody>                                
                         </table>
@@ -105,7 +105,7 @@
                 </table>
             </div>                    
             <table class="report-para">
-                <tr><td>History of any significant past illness including: 1) Allergy: NAD, 2) Others: NAD, 3) Psychiatric and neurological disorders (Epilepsy, depression, schizophrenia): NAD</td></tr>
+                <tr><td>History of any significant past illness: 1) Allergy: NAD, 2) Others: NAD, 3) Psychiatric and neurological disorders (Epilepsy, depression, schizophrenia): NAD</td></tr>
                 <tr><td>I hereby permit the: Bio-Path Medical Services Ltd and undersigned physician to fumish such information the company may need pertaining to my health status and other pertinent and medical findings and do hereby release them from any and all legal responsibility by doing so. I also certify that my medical history contained above is true and any false statement will disqualify me from my employemnet, benifits and claims.</td></tr>
             </table>
             <table class="table table-bordered">

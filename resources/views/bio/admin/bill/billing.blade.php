@@ -60,13 +60,13 @@
                       </div>
                       <div class="form-group">
                         {!! Form::label('Recruit Agent', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('recrutoffice', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
+                        {!! Form::text('recrutoffice', null, ['id'=>'recrutoffice', 'class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
                         {!! Form::label('GCC Expiry Date', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('gcc_expirydate', null, ['class'=> 'form-control col-sm-4 datepicker']) !!}
                       </div>
                       <div class="form-group">
                         {!! Form::label('Recruit Contact', null, ['class'=> 'col-sm-2']) !!}
-                        {!! Form::text('recrutingcontact', null, ['class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
+                        {!! Form::text('recrutingcontact', null, ['id'=>'recrutingcontact', 'class'=> 'form-control col-sm-4', 'required' => 'required']) !!}
                         {!! Form::label('Report Delivery Date', null, ['class'=> 'col-sm-2']) !!}
                         {!! Form::text('reportdate', null, ['class'=> 'form-control col-sm-4 datepicker', 'required' => 'required']) !!}
                       </div>
@@ -91,6 +91,20 @@
             </div>
         </div>
     </main>
+    <script> 
+        (function( $ ) {     
+            $(document).ready(function() {
+                $( "#recrutoffice" ).autocomplete({
+                    source: "{{ url('search/agent') }}",
+                    minLength: 0,
+                    select: function(event, ui) {
+                        $('#recrutoffice').val(ui.item.auto[0]);
+                        $('#recrutingcontact').val(ui.item.auto[1]);
+                    }
+                });
+            });  
+        })( jQuery );
+    </script>
 @endsection
 
 
